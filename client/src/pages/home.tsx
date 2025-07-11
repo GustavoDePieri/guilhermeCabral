@@ -1,4 +1,5 @@
 import Navigation from "@/components/ui/navigation";
+import WhatsAppButton from "@/components/ui/whatsapp-button";
 import Hero from "@/components/sections/hero";
 import Quiz from "@/components/sections/quiz";
 import Protocol from "@/components/sections/protocol";
@@ -34,6 +35,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

@@ -19,14 +19,15 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all"
+                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-6 py-3"
               >
                 Descubra seu Índice de Envelhecimento Bucal
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-lg transition-all"
+                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-lg transition-all px-6 py-3"
+                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
               >
                 Agende sua Avaliação Personalizada
               </Button>
