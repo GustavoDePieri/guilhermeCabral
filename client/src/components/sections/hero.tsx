@@ -47,12 +47,34 @@ export default function Hero() {
             </div>
           </div>
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Modern dental office with advanced equipment"
-              className="rounded-2xl shadow-2xl w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-futuristic-turquesa/10 to-transparent rounded-2xl"></div>
+            <div className="bg-gradient-to-br from-futuristic-turquesa/10 to-deep-blue/10 rounded-2xl p-8 shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                alt="Modern dental office with advanced equipment"
+                className="rounded-xl shadow-xl w-full h-auto"
+              />
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+              <div className="w-12 h-12 bg-futuristic-turquesa rounded-full flex items-center justify-center">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+            </div>
+            
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-soft-green rounded-full flex items-center justify-center">
+                  <Award className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-poppins font-semibold text-deep-blue text-sm">
+                    Protocolo Digital
+                  </div>
+                  <div className="text-xs text-gray-600">95% Precisão</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
