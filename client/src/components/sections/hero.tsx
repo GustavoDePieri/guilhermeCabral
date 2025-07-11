@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <h1 className="font-poppins font-bold text-5xl lg:text-6xl text-deep-blue leading-tight">
               Seus dentes estão{" "}
@@ -16,17 +16,17 @@ export default function Hero() {
               Conheça o protocolo que devolve o controle da sua saúde bucal
               antes que seja tarde.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-6 py-3"
+                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-8 py-4"
               >
                 Descubra seu Índice de Envelhecimento Bucal
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-lg transition-all px-6 py-3"
+                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-lg transition-all px-8 py-4"
                 onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
               >
                 Agende sua Avaliação Personalizada
