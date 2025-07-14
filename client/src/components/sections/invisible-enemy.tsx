@@ -44,7 +44,7 @@ export default function InvisibleEnemy() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-4xl text-deep-blue mb-8">
+          <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue mb-8">
             O Vilão Silencioso Que Poucos Conhecem
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-12">

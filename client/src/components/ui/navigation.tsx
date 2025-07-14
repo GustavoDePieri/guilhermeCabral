@@ -24,8 +24,9 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="font-poppins font-bold text-xl text-deep-blue">
-            Dr. Guilherme Santos
+          <div className="font-poppins font-bold text-lg md:text-xl text-deep-blue">
+            <span className="hidden sm:inline">Dr. Guilherme Ricardo Cabral dos Santos</span>
+            <span className="sm:hidden">Dr. Guilherme Santos</span>
           </div>
           
           {/* Desktop Navigation */}

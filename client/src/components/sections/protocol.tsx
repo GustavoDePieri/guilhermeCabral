@@ -5,8 +5,8 @@ export default function Protocol() {
   const features = [
     {
       icon: Microscope,
-      title: "Diagnóstico profundo e digital",
-      description: "Tecnologia avançada para identificar problemas invisíveis",
+      title: "Diagnóstico e digital",
+      description: "Tecnologia avançada para identificar desgaste dos dentes",
     },
     {
       icon: TrendingUp,
@@ -15,8 +15,8 @@ export default function Protocol() {
     },
     {
       icon: Shield,
-      title: "Proteção imediata contra desgaste",
-      description: "Intervenção preventiva antes que seja tarde",
+      title: "Proteção contra desgaste",
+      description: "Intervenção preventiva e tratar os danos já causados",
     },
     {
       icon: GraduationCap,
@@ -30,7 +30,7 @@ export default function Protocol() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="font-poppins font-bold text-4xl text-deep-blue">
+            <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue">
               O Método que vai muito além da restauração
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -68,10 +68,10 @@ export default function Protocol() {
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg">
               <div className="text-center">
-                <div className="font-poppins font-bold text-2xl text-futuristic-turquesa">
-                  95%
+                <div className="font-poppins font-bold text-xl text-futuristic-turquesa">
+                  SEPB
                 </div>
-                <div className="text-sm text-gray-600">Precisão Digital</div>
+                <div className="text-sm text-gray-600">Digital®</div>
               </div>
             </div>
           </div>

@@ -149,7 +149,7 @@ export default function Quiz() {
     <section className="py-16 bg-deep-blue" id="quiz">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-4xl text-white mb-8">
+          <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-8">
             Avalie seu Risco de SEPB em 2 Minutos
           </h2>
           <Card className="bg-white rounded-2xl p-8 shadow-xl">

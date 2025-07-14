@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-poppins font-bold text-xl mb-4">
-              Dr. Guilherme Santos
+              Dr. Guilherme Ricardo Cabral dos Santos
             </h3>
             <p className="text-gray-400 mb-4">
               Protocolo SEPB-Digital® - Preservando sorrisos naturais através da
@@ -85,7 +85,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; 2024 Dr. Guilherme Santos. Todos os direitos reservados.
+            &copy; 2024 Dr. Guilherme Ricardo Cabral dos Santos. Todos os direitos reservados.
             Protocolo SEPB-Digital® é uma marca registrada.
           </p>
         </div>

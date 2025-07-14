@@ -33,7 +33,6 @@ export default function Home() {
       <Philosophy />
       <Articles />
       <FAQ />
-      <FinalCTA />
       <Footer />
       <WhatsAppButton />
     </div>

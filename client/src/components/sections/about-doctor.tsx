@@ -16,12 +16,12 @@ export default function AboutDoctor() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="font-poppins font-bold text-4xl text-deep-blue">
+              <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue">
                 Quem está por trás do Protocolo SEPB-Digital®
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Sou o Dr. Guilherme Santos, cirurgião-dentista apaixonado por
+                  Sou o Dr. Guilherme Ricardo Cabral dos Santos, cirurgião-dentista apaixonado por
                   ensinar pessoas a manterem seus dentes naturais pelo maior
                   tempo possível. Minha missão é transformar informação e
                   tecnologia em liberdade real, para que você não dependa de
@@ -51,7 +51,7 @@ export default function AboutDoctor() {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=800"
-                alt="Dr. Guilherme Santos, professional portrait"
+                alt="Dr. Guilherme Ricardo Cabral dos Santos, professional portrait"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               

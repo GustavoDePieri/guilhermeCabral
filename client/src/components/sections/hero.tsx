@@ -7,32 +7,32 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
-            <h1 className="font-poppins font-bold text-5xl lg:text-6xl text-deep-blue leading-tight">
+            <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-deep-blue leading-tight">
               Seus dentes estão{" "}
               <span className="text-futuristic-turquesa">envelhecendo</span> mais
               rápido que você?
             </h1>
-            <p className="text-xl text-gray-600 font-roboto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 font-roboto leading-relaxed">
               Conheça o protocolo que devolve o controle da sua saúde bucal
               antes que seja tarde.
             </p>
             <div className="flex flex-col gap-4">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-8 py-4"
+                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-base md:text-lg transform hover:scale-105 transition-all px-6 md:px-8 py-3 md:py-4"
               >
                 Descubra seu Índice de Envelhecimento Bucal
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-lg transition-all px-8 py-4"
+                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-base md:text-lg transition-all px-6 md:px-8 py-3 md:py-4"
                 onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
               >
                 Agende sua Avaliação Personalizada
               </Button>
             </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
                 <Shield className="h-5 w-5 text-futuristic-turquesa" />
                 <span>Protocolo Exclusivo</span>
@@ -40,10 +40,6 @@ export default function Hero() {
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-futuristic-turquesa" />
                 <span>+500 Pacientes</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="h-5 w-5 text-futuristic-turquesa" />
-                <span>Certificado</span>
               </div>
             </div>
           </div>
@@ -72,7 +68,7 @@ export default function Hero() {
                   <div className="font-poppins font-semibold text-deep-blue text-sm">
                     Protocolo Digital
                   </div>
-                  <div className="text-xs text-gray-600">95% Precisão</div>
+                  <div className="text-xs text-gray-600">SEPB-Digital®</div>
                 </div>
               </div>
             </div>
