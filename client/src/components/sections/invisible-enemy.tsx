@@ -45,13 +45,13 @@ export default function InvisibleEnemy() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue mb-8">
-            O Vilão Silencioso Que Poucos Conhecem
+            A Síndrome do Envelhecimento Bucal Precoce
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-12">
-            Você cuida da higiene, vai ao dentista e mesmo assim sente seus dentes
-            desgastando? Essa é a Síndrome do Envelhecimento Bucal Precoce (SEPB)
-            — uma doença que destrói lentamente sua estrutura dental, seu sorriso
-            e seu bem-estar, sem aviso prévio.
+            Você sabia que seus dentes podem estar envelhecendo mais rápido que você? 
+            A SEPB é um processo degenerativo que afeta a estrutura dental, causando 
+            desgaste prematuro e perda da função mastigatória. Está relacionada a 
+            fatores como stress, alimentação, medicamentos e estilo de vida.
           </p>
 
           {/* Visual Timeline */}

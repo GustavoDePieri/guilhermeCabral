@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 export default function AboutDoctor() {
   const credentials = [
     "Especialista em diagnóstico e prevenção de desgastes não cariosos",
-    "Idealizador do Protocolo SEPB-Digital®",
+    "Idealizador do Programa Digital de estabilização da SEPB",
     "Mais de 15 anos de experiência em odontologia minimamente invasiva",
     "Cursos e formações internacionais",
     "Palestrante e mentor em saúde bucal preventiva",
@@ -17,7 +17,7 @@ export default function AboutDoctor() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue">
-                Quem está por trás do Protocolo SEPB-Digital®
+                Quem está por trás do Programa Digital de estabilização da SEPB
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -50,7 +50,7 @@ export default function AboutDoctor() {
             
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=800"
+                src="/FotoPerfilGuilherme.jpeg"
                 alt="Dr. Guilherme Ricardo Cabral dos Santos, professional portrait"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

@@ -56,6 +56,42 @@ const questions: Question[] = [
       { value: "nao-notei", label: "Não notei" },
     ],
   },
+  {
+    id: 6,
+    question: "Você considera que tem algum grau de stress/ansiedade?",
+    options: [
+      { value: "sim", label: "Sim, frequentemente" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 7,
+    question: "Você faz uso de algum tipo de medicamento?",
+    options: [
+      { value: "sim", label: "Sim, regularmente" },
+      { value: "ocasionalmente", label: "Ocasionalmente" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 8,
+    question: "Você pratica atividades físicas regularmente?",
+    options: [
+      { value: "sim", label: "Sim, regularmente" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 9,
+    question: "Você considera que dorme bem?",
+    options: [
+      { value: "sim", label: "Sim, sempre" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não, frequentemente tenho problemas de sono" },
+    ],
+  },
 ];
 
 export default function Quiz() {
@@ -125,6 +161,7 @@ export default function Quiz() {
                     <Button
                       size="lg"
                       className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold w-full"
+                      onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
                     >
                       Agendar Avaliação Personalizada
                     </Button>

@@ -31,12 +31,12 @@ export default function Protocol() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue">
-              O Método que vai muito além da restauração
+              Programa Digital de estabilização da SEPB
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              O Protocolo SEPB-Digital® é um sistema exclusivo que une tecnologia
-              avançada, conhecimento transformador e acompanhamento contínuo para
-              diagnosticar, proteger e preservar seus dentes naturais.
+              Um método exclusivo que une tecnologia avançada, conhecimento 
+              transformador e acompanhamento contínuo para diagnosticar, proteger 
+              e preservar seus dentes naturais. Vai muito além da restauração tradicional.
             </p>
             <div className="space-y-6">
               {features.map((feature, index) => (
@@ -71,7 +71,7 @@ export default function Protocol() {
                 <div className="font-poppins font-bold text-xl text-futuristic-turquesa">
                   SEPB
                 </div>
-                <div className="text-sm text-gray-600">Digital®</div>
+                <div className="text-sm text-gray-600">Program</div>
               </div>
             </div>
           </div>

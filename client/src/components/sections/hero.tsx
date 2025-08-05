@@ -13,13 +13,32 @@ export default function Hero() {
               rápido que você?
             </h1>
             <p className="text-lg md:text-xl text-gray-600 font-roboto leading-relaxed">
-              Conheça o protocolo que devolve o controle da sua saúde bucal
-              antes que seja tarde.
+              Saiba o que é a SEPB e como você pode ter o controle sobre o desgaste dos seus dentes.
             </p>
+            <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
+              <p className="font-poppins font-semibold text-deep-blue">Ela está relacionada a:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
+                <div>• Alimentação</div>
+                <div>• Problemas gástricos</div>
+                <div>• Problemas de Stress/ansiedade</div>
+                <div>• Atividade Física</div>
+                <div>• Uso de substâncias</div>
+                <div>• Uso de medicamentos</div>
+                <div>• Qualidade do sono</div>
+                <div>• Estilo de vida</div>
+                <div className="sm:col-span-2">• Entre outros...</div>
+              </div>
+            </div>
             <div className="flex flex-col gap-4">
               <Button
                 size="lg"
                 className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-base md:text-lg transform hover:scale-105 transition-all px-6 md:px-8 py-3 md:py-4"
+                onClick={() => {
+                  const quizElement = document.getElementById('quiz');
+                  if (quizElement) {
+                    quizElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Descubra seu Índice de Envelhecimento Bucal
               </Button>
@@ -27,7 +46,7 @@ export default function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-base md:text-lg transition-all px-6 md:px-8 py-3 md:py-4"
-                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
+                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Agende sua Avaliação Personalizada
               </Button>
@@ -45,11 +64,14 @@ export default function Hero() {
           </div>
           <div className="relative">
             <div className="bg-gradient-to-br from-futuristic-turquesa/10 to-deep-blue/10 rounded-2xl p-8 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                alt="Modern dental office with advanced equipment"
+              <video
+                src="/src/assets/awareness-video.mp4"
+                controls
                 className="rounded-xl shadow-xl w-full h-auto"
-              />
+                poster="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              >
+                Seu navegador não suporta vídeo.
+              </video>
             </div>
             
             {/* Floating elements */}
@@ -68,7 +90,7 @@ export default function Hero() {
                   <div className="font-poppins font-semibold text-deep-blue text-sm">
                     Protocolo Digital
                   </div>
-                  <div className="text-xs text-gray-600">SEPB-Digital®</div>
+                  <div className="text-xs text-gray-600">SEPB Program</div>
                 </div>
               </div>
             </div>

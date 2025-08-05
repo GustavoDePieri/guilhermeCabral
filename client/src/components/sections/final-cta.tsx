@@ -5,7 +5,7 @@ export default function FinalCTA() {
   const trustIndicators = [
     {
       icon: Shield,
-      text: "Protocolo Exclusivo",
+      text: "Programa Exclusivo",
     },
     {
       icon: Award,
@@ -37,6 +37,12 @@ export default function FinalCTA() {
             <Button
               size="lg"
               className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-10 py-5"
+              onClick={() => {
+                const quizElement = document.getElementById('quiz');
+                if (quizElement) {
+                  quizElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Descubra seu Índice de Envelhecimento Bucal
             </Button>
@@ -44,6 +50,7 @@ export default function FinalCTA() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-deep-blue rounded-full font-poppins font-semibold text-lg transition-all px-10 py-5"
+              onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Agende Sua Avaliação
             </Button>

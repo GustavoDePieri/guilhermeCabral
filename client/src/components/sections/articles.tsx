@@ -28,7 +28,7 @@ export default function Articles() {
             Artigos e Respaldo Científico
           </h2>
           <p className="text-xl text-gray-600 text-center mb-16">
-            Conheça a ciência por trás do Protocolo SEPB-Digital®
+            Conheça a ciência por trás do Programa Digital de estabilização da SEPB
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">

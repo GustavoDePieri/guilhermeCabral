@@ -7,7 +7,7 @@ export default function Video() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-poppins font-bold text-4xl text-white mb-8">
-            Veja Como Funciona o Protocolo SEPB-Digital®
+            Veja Como Funciona o Programa Digital de estabilização da SEPB
           </h2>
           <div className="bg-white rounded-2xl p-2 shadow-xl">
             <div className="aspect-video bg-gray-100 rounded-xl flex items-center justify-center">
@@ -22,7 +22,7 @@ export default function Video() {
                   Clique para assistir a demonstração completa
                 </p>
                 <div className="mt-4 text-sm text-gray-500">
-                  Video demonstrativo do protocolo SEPB-Digital® (3:45)
+                  Video demonstrativo do Programa Digital de estabilização da SEPB (3:45)
                 </div>
               </div>
             </div>
