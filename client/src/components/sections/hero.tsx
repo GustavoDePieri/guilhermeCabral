@@ -69,7 +69,6 @@ export default function Hero() {
                 controls
                 preload="metadata"
                 className="rounded-xl shadow-xl w-full h-auto min-h-[350px] md:min-h-[450px] lg:min-h-[550px]"
-                poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMkY0ODVFIi8+CjxjaXJjbGUgY3g9IjQwMCIgY3k9IjMwMCIgcj0iNjAiIGZpbGw9IiM0NENEOEI4IiBmaWxsLW9wYWNpdHk9IjAuMiIvPgo8cGF0aCBkPSJNMzU1IDI2NUw0NDUgMzAwTDM1NSAzMzVWMjY1WiIgZmlsbD0iI0ZGRkZGRiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM4MCIgZm9udC1mYW1pbHk9IlBvcHBpbnMsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNGRkZGRkYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlbDrWRlbyBkZSBDb25zY2llbnRpemHDp8OjbyBkYSBTRVBCPC90ZXh0Pgo8dGV4dCB4PSI0MDAiIHk9IjQyMCIgZm9udC1mYW1pbHk9IlBvcHBpbnMsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC44IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DbGlxdWUgcGFyYSBhc3Npc3RpcjwvdGV4dD4KPC9zdmc+"
               >
                 Seu navegador não suporta vídeo.
               </video>
