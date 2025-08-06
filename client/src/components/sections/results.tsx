@@ -38,10 +38,9 @@ export default function Results() {
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <video
-                src="/Depoimentos/DepoimentoVideoprincipal.mov"
+                src="/Depoimentos/DepoimentoVideoprincipal.mp4"
                 controls
                 className="rounded-2xl shadow-xl w-full h-auto"
-                poster="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
               >
                 Seu navegador não suporta vídeo.
               </video>
