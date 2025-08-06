@@ -6,7 +6,7 @@ import Protocol from "@/components/sections/protocol";
 import InvisibleEnemy from "@/components/sections/invisible-enemy";
 import Timeline from "@/components/sections/timeline";
 
-import Results from "@/components/sections/results";
+
 import Testimonials from "@/components/sections/testimonials";
 import Community from "@/components/sections/community";
 import AboutDoctor from "@/components/sections/about-doctor";
@@ -25,7 +25,7 @@ export default function Home() {
       <Protocol />
       <InvisibleEnemy />
       <Timeline />
-      <Results />
+      
       <Testimonials />
       <Community />
       <AboutDoctor />
