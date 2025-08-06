@@ -38,9 +38,10 @@ export default function Results() {
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <video
-                src="/Depoimentos/DepoimentoVideoprincipal.mp4"
+                src="/DepoimentoVideoprincipal.mp4"
                 controls
-                className="rounded-2xl shadow-xl w-full h-auto"
+                preload="metadata"
+                className="rounded-2xl shadow-xl w-full h-auto min-h-[300px] md:min-h-[400px]"
               >
                 Seu navegador não suporta vídeo.
               </video>

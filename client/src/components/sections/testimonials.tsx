@@ -78,9 +78,10 @@ export default function Testimonials() {
           <div className="mb-16">
             <div className="bg-gradient-to-br from-futuristic-turquesa/10 to-deep-blue/10 rounded-2xl p-8 shadow-2xl">
               <video
-                src="./Depoimentos/DepoimentoVideoprincipal.mp4"
+                src="/DepoimentoVideoprincipal.mp4"
                 controls
-                className="rounded-xl shadow-xl w-full h-auto"
+                preload="metadata"
+                className="rounded-xl shadow-xl w-full h-auto min-h-[300px] md:min-h-[400px]"
               >
                 Seu navegador não suporta vídeo.
               </video>
