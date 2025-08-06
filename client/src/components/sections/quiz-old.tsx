@@ -4,94 +4,100 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 
+interface Question {
+  id: number;
+  question: string;
+  options: { value: string; label: string }[];
+}
+
+const questions: Question[] = [
+  {
+    id: 1,
+    question: "Você sente sensibilidade nos dentes?",
+    options: [
+      { value: "sempre", label: "Sempre, principalmente com bebidas geladas" },
+      { value: "as-vezes", label: "Às vezes, depende do alimento" },
+      { value: "raramente", label: "Raramente ou nunca" },
+    ],
+  },
+  {
+    id: 2,
+    question: "Com que frequência você acorda com dor de cabeça ou maxilar?",
+    options: [
+      { value: "frequentemente", label: "Frequentemente" },
+      { value: "ocasionalmente", label: "Ocasionalmente" },
+      { value: "nunca", label: "Nunca" },
+    ],
+  },
+  {
+    id: 3,
+    question: "Você percebe desgaste nos seus dentes?",
+    options: [
+      { value: "sim-visivel", label: "Sim, é visível" },
+      { value: "suspeito", label: "Suspeito que sim" },
+      { value: "nao-percebo", label: "Não percebo" },
+    ],
+  },
+  {
+    id: 4,
+    question: "Você range ou aperta os dentes?",
+    options: [
+      { value: "sei-que-sim", label: "Sei que sim" },
+      { value: "disseram-que-sim", label: "Já me disseram que sim" },
+      { value: "nao-acredito", label: "Não acredito" },
+    ],
+  },
+  {
+    id: 5,
+    question: "Seus dentes estão ficando mais curtos com o tempo?",
+    options: [
+      { value: "definitivamente", label: "Definitivamente sim" },
+      { value: "talvez", label: "Talvez" },
+      { value: "nao-notei", label: "Não notei" },
+    ],
+  },
+  {
+    id: 6,
+    question: "Você considera que tem algum grau de stress/ansiedade?",
+    options: [
+      { value: "sim", label: "Sim, frequentemente" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 7,
+    question: "Você faz uso de algum tipo de medicamento?",
+    options: [
+      { value: "sim", label: "Sim, regularmente" },
+      { value: "ocasionalmente", label: "Ocasionalmente" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 8,
+    question: "Você pratica atividades físicas regularmente?",
+    options: [
+      { value: "sim", label: "Sim, regularmente" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não" },
+    ],
+  },
+  {
+    id: 9,
+    question: "Você considera que dorme bem?",
+    options: [
+      { value: "sim", label: "Sim, sempre" },
+      { value: "as-vezes", label: "Às vezes" },
+      { value: "nao", label: "Não, frequentemente tenho problemas de sono" },
+    ],
+  },
+];
+
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResult, setShowResult] = useState(false);
-
-  const questions = [
-    {
-      id: "sensitivity",
-      question: "Você sente sensibilidade nos dentes?",
-      options: [
-        { value: "always", label: "Sempre, principalmente com bebidas geladas", score: 3 },
-        { value: "sometimes", label: "Às vezes, depende do alimento", score: 2 },
-        { value: "rarely", label: "Raramente ou nunca", score: 1 },
-      ],
-    },
-    {
-      id: "wear",
-      question: "Você nota algum desgaste nos seus dentes?",
-      options: [
-        { value: "visible", label: "Sim, é visível e está piorando", score: 3 },
-        { value: "slight", label: "Um pouco, principalmente nas pontas", score: 2 },
-        { value: "none", label: "Não noto nenhum desgaste", score: 1 },
-      ],
-    },
-    {
-      id: "grinding",
-      question: "Você range ou aperta os dentes?",
-      options: [
-        { value: "often", label: "Frequentemente, especialmente durante o sono", score: 3 },
-        { value: "stress", label: "Apenas em situações de stress", score: 2 },
-        { value: "never", label: "Nunca ou raramente", score: 1 },
-      ],
-    },
-    {
-      id: "acid",
-      question: "Com que frequência você consome alimentos ácidos?",
-      options: [
-        { value: "daily", label: "Diariamente (refrigerantes, frutas cítricas)", score: 3 },
-        { value: "weekly", label: "Algumas vezes por semana", score: 2 },
-        { value: "rarely", label: "Raramente ou nunca", score: 1 },
-      ],
-    },
-    {
-      id: "age",
-      question: "Qual é a sua faixa etária?",
-      options: [
-        { value: "over50", label: "Acima de 50 anos", score: 3 },
-        { value: "30to50", label: "Entre 30 e 50 anos", score: 2 },
-        { value: "under30", label: "Abaixo de 30 anos", score: 1 },
-      ],
-    },
-    {
-      id: "medication",
-      question: "Você toma medicamentos regularmente?",
-      options: [
-        { value: "multiple", label: "Sim, vários medicamentos", score: 3 },
-        { value: "few", label: "Alguns medicamentos ocasionalmente", score: 2 },
-        { value: "none", label: "Não tomo medicamentos", score: 1 },
-      ],
-    },
-    {
-      id: "stress",
-      question: "Como você classifica seu nível de stress?",
-      options: [
-        { value: "high", label: "Alto - sinto constantemente", score: 3 },
-        { value: "moderate", label: "Moderado - em algumas situações", score: 2 },
-        { value: "low", label: "Baixo - raramente me sinto estressado", score: 1 },
-      ],
-    },
-    {
-      id: "sleep",
-      question: "Como é a qualidade do seu sono?",
-      options: [
-        { value: "poor", label: "Ruim - acordo cansado frequentemente", score: 3 },
-        { value: "ok", label: "Regular - às vezes durmo mal", score: 2 },
-        { value: "good", label: "Boa - durmo bem na maioria das noites", score: 1 },
-      ],
-    },
-    {
-      id: "checkup",
-      question: "Quando foi sua última visita ao dentista?",
-      options: [
-        { value: "years", label: "Há mais de 2 anos", score: 3 },
-        { value: "year", label: "Há cerca de 1 ano", score: 2 },
-        { value: "recent", label: "Nos últimos 6 meses", score: 1 },
-      ],
-    },
-  ];
 
   const handleAnswer = (value: string) => {
     setAnswers({ ...answers, [questions[currentQuestion].id]: value });
@@ -102,9 +108,6 @@ export default function Quiz() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResult(true);
-      setTimeout(() => {
-        document.getElementById('quiz')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
     }
   };
 
@@ -114,38 +117,26 @@ export default function Quiz() {
     }
   };
 
+  const calculateRisk = () => {
+    const riskScore = Object.values(answers).reduce((score, answer) => {
+      if (answer === "sempre" || answer === "frequentemente" || answer === "sim-visivel" || answer === "sei-que-sim" || answer === "definitivamente") {
+        return score + 3;
+      }
+      if (answer === "as-vezes" || answer === "ocasionalmente" || answer === "suspeito" || answer === "disseram-que-sim" || answer === "talvez") {
+        return score + 2;
+      }
+      return score + 1;
+    }, 0);
+
+    if (riskScore >= 12) return { level: "Alto", color: "text-red-500", description: "Sinais evidentes de SEPB. Recomendamos avaliação urgente." };
+    if (riskScore >= 8) return { level: "Moderado", color: "text-yellow-500", description: "Alguns sinais de risco. Prevenção é fundamental." };
+    return { level: "Baixo", color: "text-green-500", description: "Ótimo! Mantenha os cuidados preventivos." };
+  };
+
   const resetQuiz = () => {
     setCurrentQuestion(0);
     setAnswers({});
     setShowResult(false);
-  };
-
-  const calculateRisk = () => {
-    const totalScore = Object.keys(answers).reduce((sum, questionId) => {
-      const question = questions.find(q => q.id === questionId);
-      const selectedOption = question?.options.find(opt => opt.value === answers[questionId]);
-      return sum + (selectedOption?.score || 0);
-    }, 0);
-
-    if (totalScore <= 12) {
-      return {
-        level: "Baixo Risco",
-        description: "Seus hábitos indicam baixo risco de SEPB. Continue cuidando bem dos seus dentes!",
-        color: "text-green-500",
-      };
-    } else if (totalScore <= 18) {
-      return {
-        level: "Risco Moderado",
-        description: "Alguns fatores podem estar acelerando o desgaste dos seus dentes. É importante avaliar.",
-        color: "text-yellow-500",
-      };
-    } else {
-      return {
-        level: "Alto Risco",
-        description: "Múltiplos fatores indicam alto risco de SEPB. Recomendamos uma avaliação urgente.",
-        color: "text-red-500",
-      };
-    }
   };
 
   if (showResult) {
@@ -161,7 +152,8 @@ export default function Quiz() {
               </h2>
             </div>
             <div className="bg-white rounded-b-2xl shadow-xl p-8">
-              <div className="space-y-6 text-center">
+              <CardContent className="space-y-6 text-center">
+
                 <div className="text-center">
                   <div className={`text-6xl font-bold ${risk.color} mb-4`}>
                     {risk.level}
@@ -186,7 +178,7 @@ export default function Quiz() {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </CardContent>
             </div>
           </div>
         </div>
@@ -205,7 +197,7 @@ export default function Quiz() {
             </h2>
           </div>
           <div className="bg-white rounded-b-2xl shadow-xl p-8">
-            <div className="space-y-6">
+            <CardContent className="space-y-6">
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-sm text-gray-500">
@@ -258,7 +250,7 @@ export default function Quiz() {
                   {currentQuestion === questions.length - 1 ? "Ver Resultado" : "Próxima"}
                 </Button>
               </div>
-            </div>
+            </CardContent>
           </div>
         </div>
       </div>
