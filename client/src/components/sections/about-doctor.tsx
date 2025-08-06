@@ -51,7 +51,7 @@ export default function AboutDoctor() {
             
             <div className="relative">
               <img
-                src="./FotoPerfilGuilherme.jpeg"
+                src="/FotoPerfilGuilherme.jpeg"
                 alt="Dr. Guilherme Ricardo Cabral dos Santos, professional portrait"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
