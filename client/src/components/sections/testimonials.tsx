@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import { useState } from "react";
 
 export default function Testimonials() {
-  const testimonials = [
+  const allTestimonials = [
     {
       name: "Daniel Parra",
       initial: "D",
@@ -20,11 +22,49 @@ export default function Testimonials() {
     {
       name: "Marcos Santos",
       initial: "M",
-      text: "Impressionante! O protocolo digital me mostrou exatamente o que estava acontecendo com meus dentes. Hoje tenho conhecimento para evitar problemas futuros.",
+      text: "Impressionante! O programa digital me mostrou exatamente o que estava acontecendo com meus dentes. Hoje tenho conhecimento para evitar problemas futuros.",
       rating: 5,
       timeAgo: "1 mês"
     },
+    {
+      name: "Carla Mendes",
+      initial: "C",
+      text: "Depois de anos perdendo dentes, descobri com o Dr. Guilherme que isso não é normal. O Programa Digital de estabilização da SEPB mudou completamente minha perspectiva sobre saúde bucal.",
+      rating: 5,
+      timeAgo: "3 semanas"
+    },
+    {
+      name: "Roberto Silva",
+      initial: "R",
+      text: "Tecnologia incrível! O diagnóstico digital me mostrou problemas que nem sabia que existiam. Agora entendo como manter meus dentes saudáveis por muito mais tempo.",
+      rating: 5,
+      timeAgo: "2 semanas"
+    },
+    {
+      name: "Fernanda Costa",
+      initial: "F",
+      text: "O Dr. Guilherme é muito atencioso e usa tecnologia de ponta. Me senti muito bem cuidada e aprendi muito sobre prevenção. Recomendo para todos!",
+      rating: 5,
+      timeAgo: "1 semana"
+    },
+    {
+      name: "João Pedro",
+      initial: "J",
+      text: "Sempre tive medo de dentista, mas o Dr. Guilherme me deixou super tranquilo. O tratamento foi moderno e indolor. Agora sei como cuidar melhor dos meus dentes.",
+      rating: 5,
+      timeAgo: "5 dias"
+    },
+    {
+      name: "Marina Oliveira",
+      initial: "M",
+      text: "Excelente profissional! O programa digital me ajudou a entender que desgaste dental pode ser prevenido. Mudou minha vida completamente.",
+      rating: 5,
+      timeAgo: "1 mês"
+    }
   ];
+
+  const [showAll, setShowAll] = useState(false);
+  const testimonials = showAll ? allTestimonials : allTestimonials.slice(0, 3);
 
   return (
     <section className="py-20 bg-gray-50">
@@ -66,6 +106,31 @@ export default function Testimonials() {
               </Card>
             ))}
           </div>
+          
+          {!showAll && (
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold"
+                onClick={() => setShowAll(true)}
+              >
+                Ver Mais Depoimentos
+              </Button>
+            </div>
+          )}
+          
+          {showAll && (
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+              >
+                Agende Sua Avaliação
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>

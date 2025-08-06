@@ -42,7 +42,10 @@ export default function Articles() {
                   <p className="text-gray-600 mb-4">{article.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500">{article.readTime}</span>
-                    <button className="text-futuristic-turquesa font-poppins font-medium hover:underline">
+                    <button 
+                      className="text-futuristic-turquesa font-poppins font-medium hover:underline"
+                      onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+                    >
                       Ler artigo
                     </button>
                   </div>
@@ -55,6 +58,7 @@ export default function Articles() {
             <Button
               size="lg"
               className="bg-deep-blue text-white hover:bg-deep-blue/90 rounded-full font-poppins font-semibold"
+              onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Ver Todos os Artigos
             </Button>

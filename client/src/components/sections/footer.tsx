@@ -28,7 +28,7 @@ export default function Footer() {
               Dr. Guilherme Ricardo Cabral dos Santos
             </h3>
             <p className="text-gray-400 mb-4">
-              Protocolo SEPB-Digital® - Preservando sorrisos naturais através da
+              Programa Digital de estabilização da SEPB - Preservando sorrisos naturais através da
               tecnologia e prevenção.
             </p>
             <div className="flex space-x-4">

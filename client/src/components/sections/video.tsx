@@ -10,7 +10,7 @@ export default function Video() {
             Veja Como Funciona o Programa Digital de estabilização da SEPB
           </h2>
           <div className="bg-white rounded-2xl p-2 shadow-xl">
-            <div className="aspect-video bg-gray-100 rounded-xl flex items-center justify-center">
+            <div className="aspect-video bg-gray-900 rounded-xl flex items-center justify-center">
               <div className="text-center">
                 <Button
                   size="lg"
@@ -18,10 +18,10 @@ export default function Video() {
                 >
                   <Play className="h-8 w-8 text-white" />
                 </Button>
-                <p className="text-gray-600 font-poppins font-medium">
+                <p className="text-white font-poppins font-medium">
                   Clique para assistir a demonstração completa
                 </p>
-                <div className="mt-4 text-sm text-gray-500">
+                <div className="mt-4 text-sm text-gray-300">
                   Video demonstrativo do Programa Digital de estabilização da SEPB (3:45)
                 </div>
               </div>

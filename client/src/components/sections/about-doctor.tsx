@@ -43,6 +43,7 @@ export default function AboutDoctor() {
               <Button
                 size="lg"
                 className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Conheça Minha História
               </Button>
@@ -50,7 +51,7 @@ export default function AboutDoctor() {
             
             <div className="relative">
               <img
-                src="/FotoPerfilGuilherme.jpeg"
+                src="./FotoPerfilGuilherme.jpeg"
                 alt="Dr. Guilherme Ricardo Cabral dos Santos, professional portrait"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
