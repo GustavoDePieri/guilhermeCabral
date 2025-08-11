@@ -3,11 +3,18 @@ import { Check } from "lucide-react";
 
 export default function AboutDoctor() {
   const credentials = [
-    "Especialista em diagnóstico e prevenção de desgastes não cariosos",
-    "Idealizador do Programa Digital de estabilização da SEPB",
-    "Mais de 15 anos de experiência em odontologia minimamente invasiva",
-    "Cursos e formações internacionais",
-    "Palestrante e mentor em saúde bucal preventiva",
+    "Especialista em Destística - Zenith - Florianópolis 2021-2023",
+    "Curso Técnicas avançadas em restaurações em resina composta - Unisul - Tubarão 2019-2020",
+    "Curso Imersão em endodontia mecanizada Oswaldo - Unisul - Tubarão 2018-2019",
+    "Atualização em Endodontia Mecanizada - ADCB Magic school - Florianópolis 2020-2021",
+    "Curso Resina composta Avançada - Ronaldo Hirata 2022",
+    "Curso Estética em Função - Marcelo Calamita - Moss Tubarão 2024",
+    "Curso de Prevenção e Saúde Renovar - André Kimura - Londrina 2024",
+    "Curso Prescrição de Canabidiol na Odontologia - Guilherme Martins 2024",
+    "Curso Laminados Cerâmicos InMerso - Andre Kimura 2024",
+    "Curso Facetas Resinas Composta Técnica Direta-Indireta Chroma - Andre Kimura 2024",
+    "Curso Prótese Sobre Implante - Zenith - Florianópolis 2025",
+    "Curso Síndrome do Envelhecimento Precoce Bucal - Comunidade PRO - 2025",
   ];
 
   return (
@@ -21,11 +28,22 @@ export default function AboutDoctor() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Sou o Dr. Guilherme Ricardo Cabral dos Santos, cirurgião-dentista apaixonado por
-                  ensinar pessoas a manterem seus dentes naturais pelo maior
-                  tempo possível. Minha missão é transformar informação e
-                  tecnologia em liberdade real, para que você não dependa de
-                  tratamentos invasivos amanhã.
+                  Sou o Dr. Guilherme Cabral, cirurgião-dentista especialista em Dentística, com foco no diagnóstico e tratamento dos desgastes dentários, sejam eles cariosos ou não cariosos.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Este projeto nasceu para trazer luz a um problema pouco conhecido — tanto por muitos profissionais quanto por pacientes — que causa danos graves e silenciosos aos dentes: a Síndrome do Envelhecimento Bucal Precoce (SEPB).
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Estou aqui para levantar a bandeira contra a SEPB e evitar que cada vez mais pessoas percam seus dentes por conta dessa doença agressiva e subestimada.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Meu propósito é ampliar o conhecimento sobre essa condição e empoderar você a controlar o desgaste dos seus dentes. Não só por meio de lives, vídeos, aulas gratuitas mas como também através do protocolo SEPB-Digital®️, ofereço educação, acompanhamento e proteção real para o seu sorriso.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Minha filosofia de trabalho é pautada na odontologia minimamente invasiva e preventiva, porque acredito que a maior riqueza da nova geração é a qualidade de vida. Mastigar sem medo e sorrir com confiança são direitos que a SEPB tenta roubar — e eu quero ajudar você a manter essa liberdade.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed font-semibold">
+                  O conhecimento transforma você no protagonista da sua própria saúde e qualidade de vida.
                 </p>
                 
                 <div className="space-y-4">
@@ -63,7 +81,7 @@ export default function AboutDoctor() {
                     <div className="font-poppins font-semibold text-deep-blue">
                       +500
                     </div>
-                    <div className="text-xs text-gray-600">Pacientes</div>
+                    <div className="text-xs text-gray-600">Vidas transformadas</div>
                   </div>
                 </div>
               </div>

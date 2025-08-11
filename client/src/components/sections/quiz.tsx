@@ -47,12 +47,12 @@ export default function Quiz() {
       ],
     },
     {
-      id: "age",
-      question: "Qual é a sua faixa etária?",
+      id: "exercise",
+      question: "Você pratica atividades físicas regularmente?",
       options: [
-        { value: "over50", label: "Acima de 50 anos", score: 3 },
-        { value: "30to50", label: "Entre 30 e 50 anos", score: 2 },
-        { value: "under30", label: "Abaixo de 30 anos", score: 1 },
+        { value: "regularly", label: "Sim, pratico regularmente", score: 3 },
+        { value: "sometimes", label: "Às vezes, quando possível", score: 2 },
+        { value: "rarely", label: "Não pratico ou raramente", score: 1 },
       ],
     },
     {

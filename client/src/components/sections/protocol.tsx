@@ -38,6 +38,9 @@ export default function Protocol() {
               transformador e acompanhamento contínuo para diagnosticar, proteger 
               e preservar seus dentes naturais. Vai muito além da restauração tradicional.
             </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Ele não só diagnostica e protege seus dentes — mas também te dá o poder de entender cada detalhe e tomar decisões seguras para manter seus dentes naturais no longo prazo. O foco é lhe entregar o poder de controlar o desgaste deles, para você não depender apenas de dentistas para controlar sua saúde bucal e te transforme em um protagonista dela.
+            </p>
             <div className="space-y-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">

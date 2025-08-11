@@ -34,7 +34,7 @@ export default function Community() {
             Um Lugar Para Quem Quer Assumir o Comando da Própria Saúde Bucal
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed mb-12">
-            A Comunidade Ponto 0 é um espaço de suporte, aprendizado e evolução
+            A Comunidade Ponto da Virada é um espaço gratuito de suporte, aprendizado e evolução
             contínua.
           </p>
           
@@ -65,7 +65,7 @@ export default function Community() {
               <div className="flex items-center justify-between flex-col md:flex-row gap-4">
                 <div className="text-left">
                   <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-2">
-                    Junte-se a mais de 1.200 pessoas
+                    Faça parte de uma comunidade que tem como foco melhorar sua saúde bucal
                   </h3>
                   <p className="text-gray-600">
                     que já transformaram sua saúde bucal

@@ -3,35 +3,35 @@ export default function Timeline() {
     {
       number: 1,
       title: "Avaliação Digital Completa",
-      description: "Diagnóstico preciso usando tecnologia 3D para mapear cada detalhe da sua saúde bucal",
+      description: "Anamnese detalhada e trabalho multidisciplinar para diagnosticar a causa do problema usando tecnologia 3D para mapear cada detalhe da sua saúde bucal",
       image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Professional dental examination with modern equipment"
     },
     {
       number: 2,
       title: "Diagnóstico Visual e Explicativo",
-      description: "Você entende exatamente o que está acontecendo com seus dentes através de imagens claras",
+      description: "Você entende, com imagens claras e explicações didáticas, o que está causando o desgaste dos seus dentes — e aprende como agir para interrompê-lo antes que cause danos maiores. Isso devolve a você o controle da sua saúde bucal, sem depender exclusivamente do dentista para corrigir problemas depois que já aconteceram.",
       image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Dentist explaining treatment plan to patient"
     },
     {
       number: 3,
-      title: "Protocolo de Estabilização",
-      description: "Tratamento personalizado para interromper o processo de desgaste imediatamente",
+      title: "Tratamento personalizado para interromper o desgaste e proteger seus dentes",
+      description: "Você recebe um plano de cuidado individualizado que: • Interrompe o processo de desgaste ativo. • Reduz a sensibilidade dental que esse desgaste provoca. • Inclui procedimentos diminuem o impacto dos fatores que causam esses desgastes",
       image: "https://images.unsplash.com/photo-1597764690523-15bea4c581c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Advanced dental treatment procedure"
     },
     {
       number: 4,
-      title: "Educação e Acompanhamento",
-      description: "Aprenda técnicas práticas para manter sua saúde bucal em casa",
+      title: "Educação e orientação continuada",
+      description: "Você fará parte de uma comunidade exclusiva que mantém contato direto com você para esclarecer dúvidas sobre qualquer situação que possa impactar seus dentes. Além disso, vai ter acesso a: • Vídeos e lives explicativos que mostram, na prática, como evitar o desgaste no dia a dia. • Flyers, folders e materiais visuais claros que ajudam a identificar riscos e agir com segurança. • Conteúdos atualizados que tornam você protagonista no cuidado com sua saúde bucal. Tudo para que você tenha conhecimento e suporte contínuos para manter seus dentes protegidos.",
       image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Patient education and guidance session"
     },
     {
       number: 5,
       title: "Liberdade e Confiança",
-      description: "Viva com a tranquilidade de saber que seus dentes estão protegidos para o futuro",
+      description: "Ao finalizar o protocolo, você conquista muito mais que dentes restaurados: Livre da sensibilidade que antes limitava sua alimentação e causava desconforto diário. Sem medo de morder, quebrar ou perder dentes de forma inesperada. Tranquilidade de saber que seus dentes estão saudáveis, com os fatores de desgaste controlados. Segurança de que seu sorriso vai permanecer bonito e funcional por muito mais tempo. Autonomia real para identificar riscos e agir antes que pequenos problemas se tornem grandes. Confiança na própria rotina de cuidado, sem depender apenas de consultas para manter seus dentes protegidos. Viva com a certeza de que você tem o conhecimento, as ferramentas e o suporte necessários para envelhecer sorrindo — com saúde e liberdade.",
       image: "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Happy patient with confident smile"
     },

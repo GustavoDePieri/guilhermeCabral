@@ -5,7 +5,7 @@ export default function Video() {
   return (
     <section className="py-20 bg-deep-blue">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-poppins font-bold text-4xl text-white mb-8">
             Veja Como Funciona o Programa Digital de estabilização da SEPB
           </h2>

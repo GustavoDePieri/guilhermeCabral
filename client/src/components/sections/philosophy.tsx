@@ -19,6 +19,10 @@ export default function Philosophy() {
       title: "E que todo mundo tem o direito de envelhecer sorrindo sem medo.",
       description: "Sua idade não deveria determinar a saúde dos seus dentes. Com o protocolo certo, você pode sorrir aos 80 como sorri hoje.",
     },
+    {
+      title: "Preservar o natural é um dever moral de quem cuida da saúde de outras pessoas.",
+      description: "E isso não deve ser exclusivo a poucos deve ser a todos.",
+    },
   ];
 
   return (

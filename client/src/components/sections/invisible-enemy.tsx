@@ -32,11 +32,7 @@ export default function InvisibleEnemy() {
   const statistics = [
     {
       percentage: "70%",
-      description: "das pessoas perdem dentes antes dos 60 anos — sem saber que poderia ser evitado",
-    },
-    {
-      percentage: "50%",
-      description: "dos adultos são afetados pelo desgaste não carioso",
+      description: "das pessoas tem ou vão ter a SEPB",
     },
   ];
 
@@ -45,43 +41,38 @@ export default function InvisibleEnemy() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue mb-8">
-            A Síndrome do Envelhecimento Bucal Precoce
+            O vilão silencioso que poucos conhecem
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-12">
-            Você sabia que seus dentes podem estar envelhecendo mais rápido que você? 
-            A SEPB é um processo degenerativo que afeta a estrutura dental, causando 
-            desgaste prematuro e perda da função mastigatória. Está relacionada a 
-            fatores como stress, alimentação, medicamentos e estilo de vida.
+            Você cuida da higiene, vai ao dentista e mesmo assim sente seus dentes desgastando? Poucos profissionais sabem diagnosticar e tratar a verdadeira causa da Síndrome do Envelhecimento Bucal Precoce — que ameaça seus dentes dia após dia.
           </p>
-
-          {/* Visual Timeline */}
-          <Card className="bg-white rounded-2xl p-8 shadow-xl mb-12">
-            <CardContent>
-              <h3 className="font-poppins font-semibold text-2xl text-deep-blue mb-8">
-                Progressão do Desgaste ao Longo dos Anos
-              </h3>
-              <div className="grid md:grid-cols-4 gap-6">
-                {timeline.map((item, index) => (
-                  <div key={index} className="text-center">
-                    <div
-                      className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-4`}
-                    >
-                      <span className="font-poppins font-bold text-white text-lg">
-                        {item.age}
-                      </span>
-                    </div>
-                    <h4 className="font-poppins font-semibold text-deep-blue mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600">{item.description}</p>
-                  </div>
-                ))}
+          
+          <div className="text-left max-w-3xl mx-auto mb-12">
+            <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-6">Estamos lutando contra:</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-poppins font-semibold text-lg text-deep-blue mb-2">🔹 A Síndrome do Envelhecimento Bucal Precoce (SEPB)</h4>
+                <p className="text-gray-600">Uma condição silenciosa que, sem prevenção correta, destrói progressivamente sua estrutura dental e compromete seu sorriso no longo prazo.</p>
               </div>
-            </CardContent>
-          </Card>
+              <div>
+                <h4 className="font-poppins font-semibold text-lg text-deep-blue mb-2">🔹 A Indústria da Restauração Infinita</h4>
+                <p className="text-gray-600">Quando se restaura sem investigar a origem real do desgaste ou se faz um trabalho tão provisório que em pouco tempo precisa ser refeito — alimentando um ciclo que nunca termina.</p>
+              </div>
+              <div>
+                <h4 className="font-poppins font-semibold text-lg text-deep-blue mb-2">🔹 A Cultura do Remendo Rápido</h4>
+                <p className="text-gray-600">Focar só no alívio imediato e não enxergar o paciente como um todo. É tapar o sol com a peneira — e deixar que o problema avance silenciosamente.</p>
+              </div>
+              <div>
+                <h4 className="font-poppins font-semibold text-lg text-deep-blue mb-2">🔹 O Silêncio Conveniente</h4>
+                <p className="text-gray-600">Muitos profissionais percebem sinais de desgaste, mas escolhem não aprofundar a conversa — seja por falta de preparo ou por não saberem a quem encaminhar. Enquanto isso, o tempo trabalha contra a saúde dos seus dentes.</p>
+              </div>
+            </div>
+          </div>
+
+
 
           {/* Statistics */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-1 gap-8 mb-12 max-w-md mx-auto">
             {statistics.map((stat, index) => (
               <Card key={index} className="bg-white p-8 rounded-2xl shadow-lg">
                 <CardContent className="text-center">
