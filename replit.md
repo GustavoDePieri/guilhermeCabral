@@ -43,6 +43,7 @@ Preferred communication style: Simple, everyday language.
 2. **Interactive Elements**
    - Quiz component with multi-step form
    - FAQ accordion
+   - Articles section with real scientific PDFs from /Artigos folder
    - Mobile-responsive navigation
    - Toast notifications
 
@@ -56,6 +57,7 @@ Preferred communication style: Simple, everyday language.
 1. **Server Setup**
    - Express application with middleware
    - Request logging and performance monitoring
+   - Static file serving for articles (PDF files from /Artigos folder)
    - Static file serving in production
    - Vite integration for development
 
