@@ -10,6 +10,9 @@ app.use(express.urlencoded({ extended: false }));
 // Serve PDF files from the Artigos folder
 app.use('/Artigos', express.static(path.join(process.cwd(), 'Artigos')));
 
+// Serve photos from the fotos folder
+app.use('/fotos', express.static(path.join(process.cwd(), 'fotos')));
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
