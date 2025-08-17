@@ -5,7 +5,7 @@ export default function WhatsAppButton() {
   const message = "Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
   
   const handleWhatsAppClick = () => {
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber.replace(/\D/g, '')}&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

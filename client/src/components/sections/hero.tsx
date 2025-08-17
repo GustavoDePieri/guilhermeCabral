@@ -46,7 +46,7 @@ export default function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-base md:text-lg transition-all px-6 md:px-8 py-3 md:py-4"
-                onClick={() => window.open('https://wa.me/554898864120?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+                onClick={() => window.open('https://api.whatsapp.com/send?phone=554898864120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Agende sua Avaliação Personalizada
               </Button>

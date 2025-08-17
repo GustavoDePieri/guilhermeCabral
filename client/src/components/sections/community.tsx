@@ -74,7 +74,7 @@ export default function Community() {
                 <Button
                   size="lg"
                   className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
-                  onClick={() => window.open('https://wa.me/554898864120?text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+                  onClick={() => window.open('https://api.whatsapp.com/send?phone=554898864120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
                 >
                   Quero Fazer Parte
                 </Button>
