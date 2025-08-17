@@ -50,7 +50,7 @@ export default function FinalCTA() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-deep-blue rounded-full font-poppins font-semibold text-lg transition-all px-10 py-5"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=554898864120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Agende Sua Avaliação
             </Button>

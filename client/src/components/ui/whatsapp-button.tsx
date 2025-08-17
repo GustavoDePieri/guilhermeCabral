@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "+554898864120";
+  const phoneNumber = "+5548988644120";
   const message = "Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
   
   const handleWhatsAppClick = () => {
