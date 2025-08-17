@@ -7,7 +7,7 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Protocolo", href: "#protocolo" },
-    { label: "Resultados", href: "#resultados" },
+    { label: "Resultados", href: "#testimonials" },
     { label: "Sobre", href: "#sobre" },
     { label: "Comunidade", href: "#comunidade" },
   ];
