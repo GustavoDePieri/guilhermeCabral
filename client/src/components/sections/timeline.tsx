@@ -54,7 +54,7 @@ export default function Timeline() {
         "• Confiança na própria rotina de cuidado, sem depender apenas de consultas para manter seus dentes protegidos",
         "Viva com a certeza de que você tem o conhecimento, as ferramentas e o suporte necessários para envelhecer sorrindo — com saúde e liberdade."
       ],
-      image: "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: "https://images.unsplash.com/photo-1559825481-12a05cc00344?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       alt: "Happy patient with confident smile"
     },
   ];
