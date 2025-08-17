@@ -30,7 +30,7 @@ export default function Protocol() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="space-y-6 sm:space-y-8">
-            <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-deep-blue leading-tight">
+            <h2 className="heading-primary text-left">
               Programa Digital de estabilização da SEPB
             </h2>
             <div className="space-y-4 sm:space-y-6">
@@ -59,7 +59,7 @@ export default function Protocol() {
             <div className="pt-2">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3"
+                className="btn-primary-standard btn-large w-full sm:w-auto text-sm sm:text-base"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Quero Saber Mais

@@ -44,7 +44,7 @@ export default function Navigation() {
           
           <div className="hidden md:block">
             <Button 
-              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium"
+              className="btn-primary-standard"
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
             >
               Agendar Avaliação

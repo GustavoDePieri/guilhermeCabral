@@ -183,10 +183,10 @@ export default function Quiz() {
                   <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed px-2">
                     {risk.description}
                   </p>
-                  <div className="space-y-3 sm:space-y-4">
+                  <div className="space-y-4 perfect-center flex-col">
                     <Button
                       size="lg"
-                      className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold w-full text-sm sm:text-base px-4 py-3"
+                      className="btn-primary-standard btn-large w-full text-sm sm:text-base"
                       onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
                     >
                       Agendar Avaliação Personalizada
@@ -194,7 +194,7 @@ export default function Quiz() {
                     <Button
                       variant="outline"
                       onClick={resetQuiz}
-                      className="w-full rounded-full font-poppins font-medium text-sm sm:text-base px-4 py-3"
+                      className="btn-secondary-standard w-full text-sm sm:text-base"
                     >
                       Refazer Quiz
                     </Button>
@@ -214,10 +214,10 @@ export default function Quiz() {
         <div className="max-w-3xl mx-auto">
           {/* Tab-like header */}
           <div className="bg-gray-50 rounded-t-2xl p-4 sm:p-6 border-b-2 border-futuristic-turquesa">
-            <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center leading-tight">
+            <h2 className="heading-primary">
               Descubra seu Risco de SEPB em 2 Minutos
             </h2>
-            <p className="text-center text-gray-600 mt-2 sm:mt-4 text-sm sm:text-base">
+            <p className="text-body-large mt-2 sm:mt-4">
               Faça o teste para saber seu índice de envelhecimento bucal
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function Quiz() {
                     />
                   </div>
                 </div>
-                <h3 className="font-poppins font-semibold text-lg sm:text-xl text-deep-blue mb-4 sm:mb-6 leading-tight">
+                <h3 className="heading-secondary text-lg sm:text-xl mb-4 sm:mb-6">
                   {questions[currentQuestion].question}
                 </h3>
                 <RadioGroup
@@ -263,14 +263,14 @@ export default function Quiz() {
                   variant="outline"
                   onClick={prevQuestion}
                   disabled={currentQuestion === 0}
-                  className="rounded-full font-poppins font-medium w-full sm:w-auto order-2 sm:order-1"
+                  className="btn-secondary-standard w-full sm:w-auto order-2 sm:order-1"
                 >
                   Anterior
                 </Button>
                 <Button
                   onClick={nextQuestion}
                   disabled={!answers[questions[currentQuestion].id]}
-                  className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium w-full sm:w-auto order-1 sm:order-2"
+                  className="btn-primary-standard w-full sm:w-auto order-1 sm:order-2"
                 >
                   {currentQuestion === questions.length - 1 ? "Ver Resultado" : "Próxima"}
                 </Button>

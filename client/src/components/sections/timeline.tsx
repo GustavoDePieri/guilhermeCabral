@@ -63,7 +63,7 @@ export default function Timeline() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-poppins font-bold text-4xl text-deep-blue text-center mb-16">
+          <h2 className="heading-primary mb-16">
             Passo a Passo da Sua Transformação
           </h2>
           <div className="relative">

@@ -33,11 +33,11 @@ export default function FinalCTA() {
             natural da sua vida.
           </p>
           
-          <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
-            <div className="w-full max-w-md sm:max-w-none">
+          <div className="perfect-center flex-col gap-6 mb-12 sm:mb-16">
+            <div className="w-full max-w-md sm:max-w-lg">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transform hover:scale-105 transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto mx-auto block"
+                className="btn-primary-standard btn-large w-full text-sm sm:text-base lg:text-lg"
                 onClick={() => {
                   const quizElement = document.getElementById('quiz');
                   if (quizElement) {

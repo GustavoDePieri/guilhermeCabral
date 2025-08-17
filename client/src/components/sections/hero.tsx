@@ -29,10 +29,10 @@ export default function Hero() {
                 <div className="sm:col-span-2">• Entre outros...</div>
               </div>
             </div>
-            <div className="flex flex-col gap-3 sm:gap-4">
+            <div className="flex flex-col gap-4 w-full">
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-sm sm:text-base md:text-lg transform hover:scale-105 transition-all px-4 sm:px-6 md:px-8 py-3 md:py-4 w-full"
+                className="btn-primary-standard btn-large w-full text-sm sm:text-base md:text-lg"
                 onClick={() => {
                   const quizElement = document.getElementById('quiz');
                   if (quizElement) {
@@ -45,7 +45,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-white rounded-full font-poppins font-semibold text-sm sm:text-base md:text-lg transition-all px-4 sm:px-6 md:px-8 py-3 md:py-4 w-full"
+                className="btn-secondary-standard btn-large w-full text-sm sm:text-base md:text-lg"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Agende sua Avaliação Personalizada

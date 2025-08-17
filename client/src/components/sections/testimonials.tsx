@@ -80,7 +80,7 @@ export default function Testimonials() {
     <section className="py-20 bg-gray-50" id="testimonials">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-poppins font-bold text-4xl text-deep-blue text-center mb-16">
+          <h2 className="heading-primary mb-16">
             Depoimentos de Pacientes
           </h2>
           
@@ -102,27 +102,25 @@ export default function Testimonials() {
           <div className="relative">
             <div className="grid gap-8 md:grid-cols-2">
               {getCurrentTestimonials().map((testimonial, index) => (
-                <Card key={index} className="bg-white rounded-2xl shadow-lg">
-                  <CardContent className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-futuristic-turquesa rounded-full flex items-center justify-center text-white font-bold">
+                <Card key={index} className="card-standard">
+                  <CardContent className="card-content-centered p-8">
+                    <div className="perfect-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-futuristic-turquesa rounded-full perfect-center text-white font-bold flex-shrink-0">
                         {testimonial.initial}
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="font-poppins font-semibold text-lg text-deep-blue">
-                            {testimonial.name}
-                          </h3>
-                          <span className="text-sm text-gray-500">{testimonial.timeAgo}</span>
-                        </div>
-                        <div className="flex items-center mb-3">
-                          {Array.from({ length: testimonial.rating }).map((_, i) => (
-                            <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
-                          ))}
-                        </div>
-                        <p className="text-gray-600 leading-relaxed">{testimonial.text}</p>
+                      <div className="text-center flex-1">
+                        <h3 className="card-header-standard text-lg mb-1">
+                          {testimonial.name}
+                        </h3>
+                        <span className="text-sm text-gray-500">{testimonial.timeAgo}</span>
                       </div>
                     </div>
+                    <div className="perfect-center mb-3">
+                      {Array.from({ length: testimonial.rating }).map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="card-text-standard">{testimonial.text}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -165,10 +163,10 @@ export default function Testimonials() {
             </div>
           </div>
           
-          <div className="text-center mt-12">
+          <div className="perfect-center mt-12">
             <Button
               size="lg"
-              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+              className="btn-primary-standard btn-large"
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Agende Sua Avaliação

@@ -30,10 +30,10 @@ export default function Community() {
     <section className="py-20 bg-deep-blue" id="comunidade">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-4xl text-white mb-8">
+          <h2 className="heading-primary text-white mb-8">
             Um Lugar Para Quem Quer Assumir o Comando da Própria Saúde Bucal
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12">
+          <p className="text-body-large text-gray-300 mb-12">
             A Comunidade Ponto da Virada é um espaço gratuito de suporte, aprendizado e evolução
             contínua.
           </p>
@@ -41,14 +41,14 @@ export default function Community() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {features.map((feature, index) => (
               <Card key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl border-0">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-futuristic-turquesa rounded-full flex items-center justify-center mx-auto mb-4">
+                <CardContent className="card-content-centered p-8">
+                  <div className="w-16 h-16 bg-futuristic-turquesa rounded-full perfect-center mx-auto mb-4">
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-poppins font-semibold text-xl text-white mb-4">
+                  <h3 className="card-header-standard text-xl text-white mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300 text-center">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

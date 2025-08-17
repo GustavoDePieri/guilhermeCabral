@@ -29,17 +29,17 @@ export default function Philosophy() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-4xl text-deep-blue mb-12">
+          <h2 className="heading-primary mb-12">
             Por que faço o que faço
           </h2>
           <div className="space-y-8">
             {beliefs.map((belief, index) => (
-              <Card key={index} className="bg-white rounded-2xl shadow-lg">
-                <CardContent className="p-8">
-                  <div className="text-2xl font-poppins font-semibold text-deep-blue mb-4">
+              <Card key={index} className="card-standard">
+                <CardContent className="card-content-centered p-8">
+                  <div className="card-header-standard text-2xl mb-4">
                     {belief.title}
                   </div>
-                  <p className="text-gray-600 text-lg">{belief.description}</p>
+                  <p className="card-text-standard text-lg">{belief.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -52,7 +52,7 @@ export default function Philosophy() {
               </p>
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+                className="btn-primary-standard btn-large"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Quero Começar Agora

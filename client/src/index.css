@@ -126,6 +126,110 @@
     color: hsl(210, 11%, 15%);
   }
   
+  /* Perfect Alignment Utilities */
+  .perfect-center {
+    @apply flex items-center justify-center;
+  }
+  
+  .perfect-center-text {
+    @apply text-center flex items-center justify-center;
+  }
+  
+  .perfect-vertical-center {
+    @apply flex flex-col justify-center;
+  }
+  
+  /* Standardized Button Classes */
+  .btn-primary-standard {
+    @apply rounded-full font-poppins font-semibold;
+    @apply flex items-center justify-center min-h-[44px] px-6 py-3 transition-all transform hover:scale-105;
+    @apply text-center leading-none whitespace-normal;
+    background-color: hsl(168, 100%, 37%);
+    color: white;
+  }
+  
+  .btn-primary-standard:hover {
+    background-color: hsl(168, 100%, 33%);
+  }
+  
+  .btn-secondary-standard {
+    @apply rounded-full font-poppins font-semibold;
+    @apply flex items-center justify-center min-h-[44px] px-6 py-3 transition-all;
+    @apply text-center leading-none whitespace-normal;
+    border: 2px solid hsl(210, 50%, 25%);
+    color: hsl(210, 50%, 25%);
+  }
+  
+  .btn-secondary-standard:hover {
+    background-color: hsl(210, 50%, 25%);
+    color: white;
+  }
+  
+  .btn-large {
+    @apply min-h-[52px] px-8 py-4 text-base md:text-lg;
+  }
+  
+  .btn-small {
+    @apply min-h-[36px] px-4 py-2 text-sm;
+  }
+  
+  /* Standardized Card Classes */
+  .card-standard {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-200;
+    @apply p-6 space-y-4 transition-all hover:shadow-xl;
+  }
+  
+  .card-content-centered {
+    @apply flex flex-col items-center justify-center text-center space-y-4;
+  }
+  
+  .card-header-standard {
+    @apply font-poppins font-bold text-deep-blue text-center;
+  }
+  
+  .card-text-standard {
+    @apply font-roboto text-gray-600 text-center leading-relaxed;
+  }
+  
+  /* Standardized Spacing */
+  .section-padding {
+    @apply py-16 sm:py-20;
+  }
+  
+  .container-standard {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .content-max-width {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  /* Icon Alignment */
+  .icon-text-aligned {
+    @apply flex items-center justify-center space-x-2 text-center;
+  }
+  
+  /* Responsive Text Sizing */
+  .heading-primary {
+    @apply font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-deep-blue leading-tight text-center;
+  }
+  
+  .heading-secondary {
+    @apply font-poppins font-bold text-xl sm:text-2xl md:text-3xl text-deep-blue leading-tight text-center;
+  }
+  
+  .text-body-large {
+    @apply font-roboto text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center;
+  }
+  
+  .text-body {
+    @apply font-roboto text-sm sm:text-base text-gray-600 leading-relaxed text-center;
+  }
+  
   .bg-gray-900 {
     background-color: hsl(210, 11%, 15%);
   }

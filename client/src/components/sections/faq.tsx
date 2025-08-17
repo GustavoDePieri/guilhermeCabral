@@ -37,30 +37,30 @@ export default function FAQ() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-poppins font-bold text-4xl text-deep-blue text-center mb-16">
+          <h2 className="heading-primary mb-16">
             Perguntas Frequentes
           </h2>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <Card key={index} className="bg-white rounded-2xl shadow-lg">
+              <Card key={index} className="card-standard">
                 <CardContent className="p-0">
                   <button
-                    className="w-full p-6 text-left flex items-center justify-between focus:outline-none"
+                    className="w-full p-6 text-left perfect-center justify-between focus:outline-none"
                     onClick={() => toggleFAQ(index)}
                   >
-                    <span className="font-poppins font-semibold text-lg text-deep-blue">
+                    <span className="card-header-standard text-lg text-left">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 text-futuristic-turquesa transition-transform ${
+                      className={`h-5 w-5 text-futuristic-turquesa transition-transform flex-shrink-0 ${
                         openIndex === index ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {openIndex === index && (
                     <div className="px-6 pb-6">
-                      <p className="text-gray-600">{faq.answer}</p>
+                      <p className="card-text-standard text-left">{faq.answer}</p>
                     </div>
                   )}
                 </CardContent>
@@ -68,10 +68,10 @@ export default function FAQ() {
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="perfect-center mt-12">
             <Button
               size="lg"
-              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+              className="btn-primary-standard btn-large"
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Tire Suas Dúvidas

@@ -23,7 +23,7 @@ export default function AboutDoctor() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue">
+              <h2 className="heading-primary text-left">
                 Quem está por trás do Programa Digital de estabilização da SEPB
               </h2>
               <div className="space-y-6">
@@ -54,7 +54,7 @@ export default function AboutDoctor() {
               
               <Button
                 size="lg"
-                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold"
+                className="btn-primary-standard btn-large"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
               >
                 Conheça Minha História
