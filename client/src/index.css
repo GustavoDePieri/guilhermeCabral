@@ -63,6 +63,7 @@
   
   body {
     @apply bg-background text-foreground font-roboto antialiased;
+    overflow-x: hidden;
   }
   
   .font-poppins {
@@ -71,6 +72,24 @@
   
   .font-roboto {
     font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-4;
+    }
+    
+    /* Prevent text overflow */
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    /* Ensure proper button sizing on mobile */
+    button {
+      min-height: 44px;
+    }
   }
 }
 

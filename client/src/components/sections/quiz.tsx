@@ -166,27 +166,27 @@ export default function Quiz() {
     const risk = calculateRisk();
     return (
       <section className="py-16 bg-white" id="quiz">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
             {/* Tab-like header */}
-            <div className="bg-gray-50 rounded-t-2xl p-6 border-b-2 border-futuristic-turquesa">
-              <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center">
+            <div className="bg-gray-50 rounded-t-2xl p-4 sm:p-6 border-b-2 border-futuristic-turquesa">
+              <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center">
                 Seu Resultado
               </h2>
             </div>
-            <div className="bg-white rounded-b-2xl shadow-xl p-8">
+            <div className="bg-white rounded-b-2xl shadow-xl p-4 sm:p-6 lg:p-8">
               <div className="space-y-6 text-center">
                 <div className="text-center">
-                  <div className={`text-6xl font-bold ${risk.color} mb-4`}>
+                  <div className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${risk.color} mb-4 leading-tight`}>
                     {risk.level}
                   </div>
-                  <p className="text-lg text-gray-600 mb-8">
+                  <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed px-2">
                     {risk.description}
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     <Button
                       size="lg"
-                      className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold w-full"
+                      className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold w-full text-sm sm:text-base px-4 py-3"
                       onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
                     >
                       Agendar Avaliação Personalizada
@@ -194,7 +194,7 @@ export default function Quiz() {
                     <Button
                       variant="outline"
                       onClick={resetQuiz}
-                      className="w-full rounded-full font-poppins font-medium"
+                      className="w-full rounded-full font-poppins font-medium text-sm sm:text-base px-4 py-3"
                     >
                       Refazer Quiz
                     </Button>
@@ -210,25 +210,25 @@ export default function Quiz() {
 
   return (
     <section className="py-16 bg-white" id="quiz">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
           {/* Tab-like header */}
-          <div className="bg-gray-50 rounded-t-2xl p-6 border-b-2 border-futuristic-turquesa">
-            <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center">
+          <div className="bg-gray-50 rounded-t-2xl p-4 sm:p-6 border-b-2 border-futuristic-turquesa">
+            <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center leading-tight">
               Descubra seu Risco de SEPB em 2 Minutos
             </h2>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-gray-600 mt-2 sm:mt-4 text-sm sm:text-base">
               Faça o teste para saber seu índice de envelhecimento bucal
             </p>
           </div>
-          <div className="bg-white rounded-b-2xl shadow-xl p-8">
+          <div className="bg-white rounded-b-2xl shadow-xl p-4 sm:p-6 lg:p-8">
             <div className="space-y-6">
               <div className="mb-6">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm text-gray-500">
+                <div className="flex justify-between items-center mb-4 gap-4">
+                  <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
                     Questão {currentQuestion + 1} de {questions.length}
                   </span>
-                  <div className="w-32 bg-gray-200 rounded-full h-2">
+                  <div className="w-20 sm:w-32 bg-gray-200 rounded-full h-2 flex-shrink-0">
                     <div
                       className="bg-futuristic-turquesa h-2 rounded-full transition-all duration-300"
                       style={{
@@ -237,20 +237,20 @@ export default function Quiz() {
                     />
                   </div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-6">
+                <h3 className="font-poppins font-semibold text-lg sm:text-xl text-deep-blue mb-4 sm:mb-6 leading-tight">
                   {questions[currentQuestion].question}
                 </h3>
                 <RadioGroup
                   value={answers[questions[currentQuestion].id] || ""}
                   onValueChange={handleAnswer}
-                  className="space-y-4"
+                  className="space-y-3 sm:space-y-4"
                 >
                   {questions[currentQuestion].options.map((option) => (
-                    <div key={option.value} className="flex items-center space-x-3">
-                      <RadioGroupItem value={option.value} id={option.value} />
+                    <div key={option.value} className="flex items-start space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                      <RadioGroupItem value={option.value} id={option.value} className="mt-1 flex-shrink-0" />
                       <Label
                         htmlFor={option.value}
-                        className="text-left cursor-pointer flex-1"
+                        className="text-left cursor-pointer flex-1 text-sm sm:text-base leading-relaxed"
                       >
                         {option.label}
                       </Label>
@@ -258,19 +258,19 @@ export default function Quiz() {
                   ))}
                 </RadioGroup>
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-4">
                 <Button
                   variant="outline"
                   onClick={prevQuestion}
                   disabled={currentQuestion === 0}
-                  className="rounded-full font-poppins font-medium"
+                  className="rounded-full font-poppins font-medium w-full sm:w-auto order-2 sm:order-1"
                 >
                   Anterior
                 </Button>
                 <Button
                   onClick={nextQuestion}
                   disabled={!answers[questions[currentQuestion].id]}
-                  className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium"
+                  className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium w-full sm:w-auto order-1 sm:order-2"
                 >
                   {currentQuestion === questions.length - 1 ? "Ver Resultado" : "Próxima"}
                 </Button>
