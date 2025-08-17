@@ -38,7 +38,7 @@ export default function Timeline() {
         "• Conteúdos atualizados que tornam você protagonista no cuidado com sua saúde bucal",
         "Tudo para que você tenha conhecimento e suporte contínuos para manter seus dentes protegidos."
       ],
-      image: "/fotos/IMG_8451.heic",
+      image: "/fotos/Screenshot 2025-08-17 at 15.46.07.png",
       alt: "Patient education and guidance session"
     },
     {

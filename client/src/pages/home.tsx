@@ -2,12 +2,9 @@ import Navigation from "@/components/ui/navigation";
 import WhatsAppButton from "@/components/ui/whatsapp-button";
 import Hero from "@/components/sections/hero";
 import Quiz from "@/components/sections/quiz";
-import AestheticCases from "@/components/sections/aesthetic-cases";
 import Protocol from "@/components/sections/protocol";
 import InvisibleEnemy from "@/components/sections/invisible-enemy";
 import Timeline from "@/components/sections/timeline";
-
-
 import Testimonials from "@/components/sections/testimonials";
 import Community from "@/components/sections/community";
 import AboutDoctor from "@/components/sections/about-doctor";
@@ -27,7 +24,6 @@ export default function Home() {
       <Timeline />
       
       <Testimonials />
-      <AestheticCases />
       <AboutDoctor />
       <Philosophy />
       <Community />
