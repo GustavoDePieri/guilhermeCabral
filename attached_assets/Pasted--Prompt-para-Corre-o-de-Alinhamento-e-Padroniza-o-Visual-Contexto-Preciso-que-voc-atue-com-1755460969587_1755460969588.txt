@@ -1,0 +1,68 @@
+# Prompt para Correção de Alinhamento e Padronização Visual
+
+**Contexto:** Preciso que você atue como um desenvolvedor frontend expert para corrigir problemas de alinhamento e padronização visual em minha landing page.
+
+## Problemas Identificados que Preciso Resolver:
+
+### 1. **Botões Desalinhados**
+- Textos não estão centralizados verticalmente e horizontalmente nos botões
+- Botões com tamanhos inconsistentes
+- Espaçamentos irregulares entre botões
+- Padding interno desigual
+
+### 2. **Textos em Boxes/Cards**
+- Textos não centralizados adequadamente
+- Alinhamentos inconsistentes entre diferentes seções
+- Espaçamentos internos irregulares
+
+### 3. **Padronização Geral**
+- Elementos similares com estilos diferentes
+- Falta de consistência visual entre seções
+
+## O que Preciso que Você Faça:
+
+### ✅ **Análise Completa**
+1. Revise todo o código CSS/HTML da landing page
+2. Identifique TODOS os problemas de alinhamento
+3. Mapeie inconsistências de estilo
+
+### ✅ **Correções Específicas**
+1. **Para Botões:**
+   - Centralizar textos perfeita (vertical + horizontal)
+   - Padronizar tamanhos (altura, largura, padding)
+   - Unificar estilos (border-radius, cores, fontes)
+   - Corrigir estados hover/active
+
+2. **Para Boxes/Cards:**
+   - Centralizar todo conteúdo textual
+   - Padronizar espaçamentos internos
+   - Alinhar elementos consistentemente
+   - Equilibrar distribuição de conteúdo
+
+3. **Para Layout Geral:**
+   - Verificar alinhamento de seções
+   - Padronizar margens e espaçamentos
+   - Garantir responsividade mantida
+
+### ✅ **Padrões de Qualidade**
+- Use `display: flex` com `justify-content: center` e `align-items: center` para centralizações perfeitas
+- Implemente classes CSS reutilizáveis para elementos similares
+- Mantenha consistência de `font-size`, `line-height`, `padding`, `margin`
+- Teste em diferentes tamanhos de tela
+
+### ✅ **Entrega**
+1. Código corrigido completo
+2. Comentários explicando as principais mudanças
+3. Lista das correções implementadas
+4. Versão otimizada e limpa do CSS
+
+## Instruções Adicionais:
+- Priorize a experiência visual consistente
+- Mantenha a funcionalidade existente intacta
+- Use boas práticas de CSS moderno
+- Garanta que tudo fique "pixel-perfect"
+
+**Objetivo Final:** Transformar a landing page em algo visualmente polido, profissional e com alinhamentos impecáveis em todos os elementos.
+
+---
+*Cole seu código HTML/CSS atual abaixo para que eu possa fazer as correções necessárias.*
