@@ -33,10 +33,10 @@ export default function FinalCTA() {
             natural da sua vida.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
             <Button
               size="lg"
-              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-lg transform hover:scale-105 transition-all px-10 py-5"
+              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transform hover:scale-105 transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto"
               onClick={() => {
                 const quizElement = document.getElementById('quiz');
                 if (quizElement) {
@@ -49,7 +49,7 @@ export default function FinalCTA() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-deep-blue rounded-full font-poppins font-semibold text-lg transition-all px-10 py-5"
+              className="border-2 border-white text-white hover:bg-white hover:text-deep-blue rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto"
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
             >
               Agende Sua Avaliação
