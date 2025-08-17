@@ -45,7 +45,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Button 
               className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium"
-              onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
+              onClick={() => window.open('https://wa.me/554898864120?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
             >
               Agendar Avaliação
             </Button>
@@ -79,7 +79,7 @@ export default function Navigation() {
               ))}
               <Button 
                 className="w-full bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium mt-4"
-                onClick={() => window.open('https://wa.me/5548999547607?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
+                onClick={() => window.open('https://wa.me/554898864120?text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
               >
                 Agendar Avaliação
               </Button>

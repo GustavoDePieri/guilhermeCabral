@@ -14,8 +14,8 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: MapPin, text: "São Paulo, SP" },
-    { icon: Phone, text: "(11) 99999-9999" },
+    { icon: MapPin, text: "Jaguaruna, SC" },
+    { icon: Phone, text: "(48) 98864-4120" },
     { icon: Mail, text: "contato@sepbdigital.com" },
   ];
 
