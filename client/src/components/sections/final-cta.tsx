@@ -22,38 +22,32 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-deep-blue to-deep-blue/90" id="final-cta">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-5xl text-white mb-8">
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-deep-blue to-deep-blue/90" id="final-cta">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6 sm:mb-8 leading-tight">
             Pronto para viver sem medo de perder o seu sorriso?
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto">
             Vamos juntos construir um futuro onde seus dentes acompanhem o ritmo
             natural da sua vida.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
-            <Button
-              size="lg"
-              className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transform hover:scale-105 transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto"
-              onClick={() => {
-                const quizElement = document.getElementById('quiz');
-                if (quizElement) {
-                  quizElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Descubra seu Índice de Envelhecimento Bucal
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-deep-blue rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
-            >
-              Agende Sua Avaliação
-            </Button>
+          <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
+            <div className="w-full max-w-md sm:max-w-none">
+              <Button
+                size="lg"
+                className="bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-semibold text-sm sm:text-base lg:text-lg transform hover:scale-105 transition-all px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 w-full sm:w-auto mx-auto block"
+                onClick={() => {
+                  const quizElement = document.getElementById('quiz');
+                  if (quizElement) {
+                    quizElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Descubra seu Índice de Envelhecimento Bucal
+              </Button>
+            </div>
           </div>
           
           {/* Trust indicators */}
