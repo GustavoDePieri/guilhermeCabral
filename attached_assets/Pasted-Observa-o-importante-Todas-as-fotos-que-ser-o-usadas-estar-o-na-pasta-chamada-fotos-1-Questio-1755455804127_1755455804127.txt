@@ -1,0 +1,117 @@
+Observação importante:
+Todas as fotos que serão usadas estarão na pasta chamada "fotos".
+
+1. Questionário (Quiz)
+
+Algumas perguntas devem gerar alto ou médio risco instantâneo:
+
+Sensibilidade → sempre desencadeia alto risco.
+
+Qualquer outra resposta do meio → no mínimo gera médio risco.
+
+Pode virar alto risco se associada a outras respostas.
+
+O quiz deve ser colocado no final da página, acessado pelo botão “Descubra seu índice de envelhecimento”.
+
+Adicionar também o texto: “Faça o teste para saber seu risco de ter a SEPB”.
+
+O botão “Veja se você está em risco” deve funcionar e levar para o quiz.
+
+2. Sessão Passo a Passo
+
+Alguns itens devem estar em lista, não em texto corrido.
+
+Fotos do passo a passo (usar da pasta fotos):
+
+IMG_8159 (eu com scanner)
+
+IMG_8139 (tirando foto)
+
+IMG_1915 (dentes com instrumento verde)
+
+IMG_8451 (laser)
+
+(manter a existente por enquanto)
+
+No final da sessão Passo a Passo, adicionar um botão de agendamento.
+
+3. Vídeos
+
+Adicionar thumbnails em todos os vídeos.
+
+Remover no primeiro vídeo a menção ao protocolo digital SEPB program.
+
+4. Estrutura das Sessões
+
+Na foto principal, remover o “+ 15 anos”.
+
+Colocar a sessão da comunidade logo após o currículo.
+
+Botão “Resultados” deve redirecionar para a sessão de depoimentos.
+
+5. Depoimentos
+
+Manter somente:
+
+Daniel
+
+Ana Clara
+
+Roberto Silva
+
+Fernanda Costa
+
+João Pedro
+
+Marina Oliveira
+
+Remover:
+
+Marcos Santos
+
+Carla Mendes
+
+Adicionar: alguns dos depoimentos que eu enviei (não inventar novos).
+
+Logo abaixo dos depoimentos, adicionar a seção “Casos Estéticos” com as fotos de sorrisos (da pasta fotos).
+
+6. Texto Institucional (já pronto para colar)
+
+Método exclusivo que combina tecnologia avançada, conhecimento e acompanhamento contínuo para diagnosticar, proteger e preservar seus dentes naturais — muito além da restauração tradicional.
+
+Além de cuidar, ele te dá o poder de entender cada detalhe, tomar decisões seguras e controlar o desgaste a longo prazo, tornando você protagonista da sua saúde bucal.
+
+Você cuida da higiene, vai ao dentista e mesmo assim sente seus dentes desgastando? Poucos profissionais sabem identificar e tratar a verdadeira causa da Síndrome do Envelhecimento Bucal Precoce (SEPB) — que ameaça seu sorriso todos os dias.
+
+Estamos lutando contra:
+🔹 SEPB — condição silenciosa que, sem prevenção correta, destrói a estrutura dental e compromete o sorriso no longo prazo.
+🔹 Indústria da Restauração Infinita — restaurações sem investigar a origem do desgaste, criando um ciclo sem fim.
+🔹 Cultura do Remendo Rápido — foca no alívio imediato, ignorando a causa real e permitindo que o problema avance.
+🔹 Silêncio Conveniente — quando sinais de desgaste são ignorados por falta de preparo ou conhecimento, enquanto o tempo age contra seus dentes.
+
+Você entende, com imagens claras e explicações simples, o que está causando o desgaste dos seus dentes — e aprende a agir para interromper antes que os danos aumentem. Isso devolve a você o controle da sua saúde bucal, sem depender só do dentista para consertar depois que o problema aparece.
+
+Você fará parte de uma comunidade exclusiva com contato direto para tirar dúvidas sobre seus dentes.
+
+Além disso, terá acesso a:
+• Vídeos e lives práticos para evitar o desgaste diário.
+• Materiais visuais que ajudam a identificar riscos e agir com segurança.
+• Conteúdos atualizados para tornar você protagonista do cuidado bucal.
+
+Ao finalizar o protocolo, você conquista muito mais que dentes restaurados:
+• Livre da sensibilidade que limitava sua alimentação e causava desconforto.
+• Sem medo de morder, quebrar ou perder dentes inesperadamente.
+• Tranquilidade por ter seus dentes saudáveis e o desgaste controlado.
+• Segurança de um sorriso bonito e funcional por muito mais tempo.
+• Autonomia para identificar riscos e agir antes que problemas cresçam.
+• Confiança na rotina de cuidados, sem depender só do dentista.
+
+Viva com a certeza de ter conhecimento, ferramentas e suporte para envelhecer sorrindo — com saúde e liberdade.
+
+Sou Dr. Guilherme Cabral, cirurgião-dentista especialista em Dentística, focado no diagnóstico e tratamento dos desgastes dentários, cariosos ou não.
+
+Este projeto nasceu para revelar um problema pouco conhecido, mas grave: a Síndrome do Envelhecimento Bucal Precoce (SEPB).
+Minha missão é combater a SEPB, evitando que mais pessoas percam dentes por causa dessa condição silenciosa.
+
+Ofereço educação, acompanhamento e proteção real para o seu sorriso, por meio de lives, vídeos e do protocolo SEPB-Digital®.
+Trabalho com odontologia minimamente invasiva e preventiva, porque acredito que qualidade de vida é a maior riqueza. Mastigar sem medo e sorrir com confiança são direitos que quero ajudar você a manter.

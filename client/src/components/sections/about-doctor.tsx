@@ -28,22 +28,16 @@ export default function AboutDoctor() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Sou o Dr. Guilherme Cabral, cirurgião-dentista especialista em Dentística, com foco no diagnóstico e tratamento dos desgastes dentários, sejam eles cariosos ou não cariosos.
+                  Sou Dr. Guilherme Cabral, cirurgião-dentista especialista em Dentística, focado no diagnóstico e tratamento dos desgastes dentários, cariosos ou não.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Este projeto nasceu para trazer luz a um problema pouco conhecido — tanto por muitos profissionais quanto por pacientes — que causa danos graves e silenciosos aos dentes: a Síndrome do Envelhecimento Bucal Precoce (SEPB).
+                  Este projeto nasceu para revelar um problema pouco conhecido, mas grave: a Síndrome do Envelhecimento Bucal Precoce (SEPB). Minha missão é combater a SEPB, evitando que mais pessoas percam dentes por causa dessa condição silenciosa.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Estou aqui para levantar a bandeira contra a SEPB e evitar que cada vez mais pessoas percam seus dentes por conta dessa doença agressiva e subestimada.
+                  Ofereço educação, acompanhamento e proteção real para o seu sorriso, por meio de lives, vídeos e do protocolo SEPB-Digital®.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Meu propósito é ampliar o conhecimento sobre essa condição e empoderar você a controlar o desgaste dos seus dentes. Não só por meio de lives, vídeos, aulas gratuitas mas como também através do protocolo SEPB-Digital®️, ofereço educação, acompanhamento e proteção real para o seu sorriso.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Minha filosofia de trabalho é pautada na odontologia minimamente invasiva e preventiva, porque acredito que a maior riqueza da nova geração é a qualidade de vida. Mastigar sem medo e sorrir com confiança são direitos que a SEPB tenta roubar — e eu quero ajudar você a manter essa liberdade.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed font-semibold">
-                  O conhecimento transforma você no protagonista da sua própria saúde e qualidade de vida.
+                  Trabalho com odontologia minimamente invasiva e preventiva, porque acredito que qualidade de vida é a maior riqueza. Mastigar sem medo e sorrir com confiança são direitos que quero ajudar você a manter.
                 </p>
                 
                 <div className="space-y-4">
@@ -86,16 +80,7 @@ export default function AboutDoctor() {
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="text-center">
-                    <div className="font-poppins font-semibold text-deep-blue">
-                      15+
-                    </div>
-                    <div className="text-xs text-gray-600">Anos</div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

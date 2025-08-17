@@ -2,6 +2,7 @@ import Navigation from "@/components/ui/navigation";
 import WhatsAppButton from "@/components/ui/whatsapp-button";
 import Hero from "@/components/sections/hero";
 import Quiz from "@/components/sections/quiz";
+import AestheticCases from "@/components/sections/aesthetic-cases";
 import Protocol from "@/components/sections/protocol";
 import InvisibleEnemy from "@/components/sections/invisible-enemy";
 import Timeline from "@/components/sections/timeline";
@@ -21,17 +22,19 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <Quiz />
       <Protocol />
       <InvisibleEnemy />
       <Timeline />
       
       <Testimonials />
-      <Community />
+      <AestheticCases />
       <AboutDoctor />
       <Philosophy />
+      <Community />
       <Articles />
       <FAQ />
+      <Quiz />
+      <FinalCTA />
       <Footer />
       <WhatsAppButton />
     </div>

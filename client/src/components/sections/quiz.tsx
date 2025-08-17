@@ -121,29 +121,43 @@ export default function Quiz() {
   };
 
   const calculateRisk = () => {
-    const totalScore = Object.keys(answers).reduce((sum, questionId) => {
-      const question = questions.find(q => q.id === questionId);
-      const selectedOption = question?.options.find(opt => opt.value === answers[questionId]);
-      return sum + (selectedOption?.score || 0);
-    }, 0);
-
-    if (totalScore <= 12) {
+    // Check for instant high risk: sensitivity always triggers high risk
+    if (answers.sensitivity === "always") {
       return {
-        level: "Baixo Risco",
-        description: "Seus hábitos indicam baixo risco de SEPB. Continue cuidando bem dos seus dentes!",
-        color: "text-green-500",
+        level: "Alto Risco",
+        description: "A sensibilidade constante é um forte indicativo de SEPB. É fundamental buscar avaliação profissional imediatamente.",
+        color: "text-red-500",
       };
-    } else if (totalScore <= 18) {
+    }
+
+    // Count medium/high risk answers (excluding never/rarely/low answers)
+    const riskAnswers = Object.entries(answers).filter(([questionId, answer]) => {
+      // Medium to high risk indicators
+      const mediumHighRiskAnswers = [
+        'sometimes', 'visible', 'slight', 'stress', 'often', 'weekly', 'daily', 
+        'regularly', 'few', 'multiple', 'moderate', 'high', 'poor', 'ok', 'years', 'year'
+      ];
+      return mediumHighRiskAnswers.includes(answer);
+    }).length;
+
+    // Any medium/high risk answer triggers at least medium risk
+    if (riskAnswers >= 3) {
+      return {
+        level: "Alto Risco",
+        description: "Múltiplos fatores indicam alto risco de SEPB. Seus dentes podem estar sofrendo desgaste acelerado.",
+        color: "text-red-500",
+      };
+    } else if (riskAnswers >= 1) {
       return {
         level: "Risco Moderado",
-        description: "Alguns fatores podem estar acelerando o desgaste dos seus dentes. É importante avaliar.",
+        description: "Alguns fatores indicam possível desenvolvimento de SEPB. Prevenção é fundamental neste momento.",
         color: "text-yellow-500",
       };
     } else {
       return {
-        level: "Alto Risco",
-        description: "Múltiplos fatores indicam alto risco de SEPB. Recomendamos uma avaliação urgente.",
-        color: "text-red-500",
+        level: "Baixo Risco",
+        description: "Parabéns! Seus hábitos indicam baixo risco para SEPB. Continue cuidando bem dos seus dentes.",
+        color: "text-green-500",
       };
     }
   };
@@ -201,8 +215,11 @@ export default function Quiz() {
           {/* Tab-like header */}
           <div className="bg-gray-50 rounded-t-2xl p-6 border-b-2 border-futuristic-turquesa">
             <h2 className="font-poppins font-bold text-2xl md:text-3xl lg:text-4xl text-deep-blue text-center">
-              Avalie seu Risco de SEPB em 2 Minutos
+              Descubra seu Risco de SEPB em 2 Minutos
             </h2>
+            <p className="text-center text-gray-600 mt-4">
+              Faça o teste para saber seu índice de envelhecimento bucal
+            </p>
           </div>
           <div className="bg-white rounded-b-2xl shadow-xl p-8">
             <div className="space-y-6">

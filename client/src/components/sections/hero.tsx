@@ -90,7 +90,7 @@ export default function Hero() {
                   <div className="font-poppins font-semibold text-deep-blue text-sm">
                     Protocolo Digital
                   </div>
-                  <div className="text-xs text-gray-600">SEPB Program</div>
+                  <div className="text-xs text-gray-600">Programa Digital</div>
                 </div>
               </div>
             </div>

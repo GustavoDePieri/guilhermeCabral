@@ -19,20 +19,7 @@ export default function Testimonials() {
       rating: 5,
       timeAgo: "2 meses"
     },
-    {
-      name: "Marcos Santos",
-      initial: "M",
-      text: "Impressionante! O programa digital me mostrou exatamente o que estava acontecendo com meus dentes. Hoje tenho conhecimento para evitar problemas futuros.",
-      rating: 5,
-      timeAgo: "1 mês"
-    },
-    {
-      name: "Carla Mendes",
-      initial: "C",
-      text: "Depois de anos perdendo dentes, descobri com o Dr. Guilherme que isso não é normal. O Programa Digital de estabilização da SEPB mudou completamente minha perspectiva sobre saúde bucal.",
-      rating: 5,
-      timeAgo: "3 semanas"
-    },
+
     {
       name: "Roberto Silva",
       initial: "R",
@@ -186,6 +173,85 @@ export default function Testimonials() {
             >
               Agende Sua Avaliação
             </Button>
+          </div>
+        </div>
+      </div>
+      
+      {/* Aesthetic Cases Section */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-poppins font-bold text-4xl text-deep-blue text-center mb-16">
+              Casos Estéticos
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-lg">
+                <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-4 text-center">
+                  Transformação Natural
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Antes</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Depois</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-lg">
+                <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-4 text-center">
+                  Sorriso Renovado
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Antes</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Depois</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-lg">
+                <h3 className="font-poppins font-semibold text-xl text-deep-blue mb-4 text-center">
+                  Restauração Completa
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Antes</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p className="text-sm font-medium text-gray-600 mb-2">Depois</p>
+                    <div className="rounded-xl w-full h-48 bg-gray-200 flex items-center justify-center shadow-md">
+                      <span className="text-gray-500">Foto dos casos estéticos da pasta fotos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

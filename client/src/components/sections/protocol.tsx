@@ -34,12 +34,10 @@ export default function Protocol() {
               Programa Digital de estabilização da SEPB
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Um método exclusivo que une tecnologia avançada, conhecimento 
-              transformador e acompanhamento contínuo para diagnosticar, proteger 
-              e preservar seus dentes naturais. Vai muito além da restauração tradicional.
+              Método exclusivo que combina tecnologia avançada, conhecimento e acompanhamento contínuo para diagnosticar, proteger e preservar seus dentes naturais — muito além da restauração tradicional.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Ele não só diagnostica e protege seus dentes — mas também te dá o poder de entender cada detalhe e tomar decisões seguras para manter seus dentes naturais no longo prazo. O foco é lhe entregar o poder de controlar o desgaste deles, para você não depender apenas de dentistas para controlar sua saúde bucal e te transforme em um protagonista dela.
+              Além de cuidar, ele te dá o poder de entender cada detalhe, tomar decisões seguras e controlar o desgaste a longo prazo, tornando você protagonista da sua saúde bucal.
             </p>
             <div className="space-y-6">
               {features.map((feature, index) => (
