@@ -1,0 +1,11 @@
+# Exclude large unused asset files from Vercel deployment
+client/src/assets/DepoimentoVideoprincipal.mov
+client/src/assets/*.mov
+
+# Server files (not needed for static deployment)
+server/
+
+# Dev tooling
+.replit
+replit.md
+drizzle.config.ts
