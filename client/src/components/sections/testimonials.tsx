@@ -1,176 +1,198 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, Quote, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useInView } from "@/hooks/use-in-view";
+
+const WA_URL =
+  "https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
+
+const testimonials = [
+  {
+    name: "Daniel Parra",
+    initial: "D",
+    text: "Sou de fora de Jaguaruna e fiquei impressionado pela agilidade no agendamento e atenção na consulta. Alto nível de tecnologia — fiz o processo com um smart glass assistindo Netflix.",
+    rating: 5,
+    timeAgo: "4 semanas",
+    color: "#00BFA5",
+  },
+  {
+    name: "Ana Clara",
+    initial: "A",
+    text: "Finalmente encontrei um dentista que se preocupa em ensinar e não apenas tratar. O Dr. Guilherme explicou tudo sobre a SEPB de forma clara e agora sei como proteger meus dentes.",
+    rating: 5,
+    timeAgo: "2 meses",
+    color: "#3b82f6",
+  },
+  {
+    name: "Roberto Silva",
+    initial: "R",
+    text: "Tecnologia incrível! O diagnóstico digital mostrou problemas que nem sabia que existiam. Agora entendo como manter meus dentes saudáveis por muito mais tempo.",
+    rating: 5,
+    timeAgo: "2 semanas",
+    color: "#8b5cf6",
+  },
+  {
+    name: "Fernanda Costa",
+    initial: "F",
+    text: "O Dr. Guilherme é muito atencioso e usa tecnologia de ponta. Me senti muito bem cuidada e aprendi muito sobre prevenção. Recomendo para todos!",
+    rating: 5,
+    timeAgo: "1 semana",
+    color: "#ec4899",
+  },
+  {
+    name: "João Pedro",
+    initial: "J",
+    text: "Sempre tive medo de dentista, mas o Dr. Guilherme me deixou super tranquilo. O tratamento foi moderno e indolor. Agora sei como cuidar melhor dos meus dentes.",
+    rating: 5,
+    timeAgo: "5 dias",
+    color: "#f59e0b",
+  },
+  {
+    name: "Marina Oliveira",
+    initial: "M",
+    text: "Excelente profissional! O programa digital me ajudou a entender que desgaste dental pode ser prevenido. Mudou minha vida completamente.",
+    rating: 5,
+    timeAgo: "1 mês",
+    color: "#10b981",
+  },
+];
 
 export default function Testimonials() {
-  const allTestimonials = [
-    {
-      name: "Daniel Parra",
-      initial: "D",
-      text: "Sou de fora de Jaguaruna e fiquei impressionado que ao necessitar de um atendimento houve agilidade no agendamento e muita atenção na consulta. Bônus: alto nível de tecnologia, fiz o processo com um smart glass assistindo The Office no Netflix.",
-      rating: 5,
-      timeAgo: "4 semanas"
-    },
-    {
-      name: "Ana Clara",
-      initial: "A", 
-      text: "Finalmente encontrei um dentista que se preocupa em ensinar e não apenas tratar. O Dr. Guilherme explicou tudo sobre a SEPB de forma clara e agora sei como proteger meus dentes.",
-      rating: 5,
-      timeAgo: "2 meses"
-    },
+  const { ref, inView } = useInView();
+  const [page, setPage] = useState(0);
+  const perPage = 3;
+  const totalPages = Math.ceil(testimonials.length / perPage);
 
-    {
-      name: "Roberto Silva",
-      initial: "R",
-      text: "Tecnologia incrível! O diagnóstico digital me mostrou problemas que nem sabia que existiam. Agora entendo como manter meus dentes saudáveis por muito mais tempo.",
-      rating: 5,
-      timeAgo: "2 semanas"
-    },
-    {
-      name: "Fernanda Costa",
-      initial: "F",
-      text: "O Dr. Guilherme é muito atencioso e usa tecnologia de ponta. Me senti muito bem cuidada e aprendi muito sobre prevenção. Recomendo para todos!",
-      rating: 5,
-      timeAgo: "1 semana"
-    },
-    {
-      name: "João Pedro",
-      initial: "J",
-      text: "Sempre tive medo de dentista, mas o Dr. Guilherme me deixou super tranquilo. O tratamento foi moderno e indolor. Agora sei como cuidar melhor dos meus dentes.",
-      rating: 5,
-      timeAgo: "5 dias"
-    },
-    {
-      name: "Marina Oliveira",
-      initial: "M",
-      text: "Excelente profissional! O programa digital me ajudou a entender que desgaste dental pode ser prevenido. Mudou minha vida completamente.",
-      rating: 5,
-      timeAgo: "1 mês"
-    }
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const testimonialsPerPage = 2;
-  const totalPages = Math.ceil(allTestimonials.length / testimonialsPerPage);
-  
-  const getCurrentTestimonials = () => {
-    const startIndex = currentIndex * testimonialsPerPage;
-    return allTestimonials.slice(startIndex, startIndex + testimonialsPerPage);
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
-  // Auto-advance carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
+      setPage((p) => (p + 1) % totalPages);
     }, 5000);
-
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, []);
+
+  const current = testimonials.slice(page * perPage, page * perPage + perPage);
 
   return (
-    <section className="py-20 bg-gray-50" id="testimonials">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="heading-primary mb-16">
-            Depoimentos de Pacientes
-          </h2>
-          
-          {/* Video Testimonial - Smaller */}
-          <div className="mb-16">
-            <div className="bg-gradient-to-br from-futuristic-turquesa/10 to-deep-blue/10 rounded-2xl p-6 shadow-2xl max-w-2xl mx-auto">
-              <video
-                src="/DepoimentoVideoprincipal.mp4"
-                controls
-                preload="metadata"
-                className="rounded-xl shadow-xl w-full h-auto max-h-[300px]"
-              >
-                Seu navegador não suporta vídeo.
-              </video>
+    <section className="section-light" id="testimonials">
+      <div className="container-xl">
+        <div ref={ref}>
+          {/* Header */}
+          <div
+            className={`text-center max-w-2xl mx-auto mb-12 transition-all duration-700 ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <p className="section-label mb-3">Depoimentos</p>
+            <h2 className="heading-lg text-gray-900">
+              O que nossos{" "}
+              <span className="gradient-text">pacientes dizem</span>
+            </h2>
+          </div>
+
+          {/* Video testimonial */}
+          <div
+            className={`mb-14 flex justify-center transition-all duration-700 delay-200 ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div
+              className="relative rounded-2xl overflow-hidden shadow-2xl max-w-xl w-full p-1"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,191,165,0.6) 0%, rgba(0,64,128,0.4) 100%)",
+              }}
+            >
+              <div className="rounded-2xl overflow-hidden bg-black">
+                <video
+                  src="/DepoimentoVideoprincipal.mp4"
+                  controls
+                  preload="metadata"
+                  className="w-full h-auto rounded-xl"
+                  style={{ maxHeight: "320px" }}
+                >
+                  Seu navegador não suporta vídeo.
+                </video>
+              </div>
             </div>
           </div>
-          
-          {/* Text Testimonials Carousel */}
-          <div className="relative">
-            <div className="grid gap-8 md:grid-cols-2">
-              {getCurrentTestimonials().map((testimonial, index) => (
-                <Card key={index} className="card-standard">
-                  <CardContent className="card-content-centered p-8">
-                    <div className="perfect-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-futuristic-turquesa rounded-full perfect-center text-white font-bold flex-shrink-0">
-                        {testimonial.initial}
-                      </div>
-                      <div className="text-center flex-1">
-                        <h3 className="card-header-standard text-lg mb-1">
-                          {testimonial.name}
-                        </h3>
-                        <span className="text-sm text-gray-500">{testimonial.timeAgo}</span>
-                      </div>
+
+          {/* Testimonial cards */}
+          <div
+            className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8 transition-all duration-700 delay-300 ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            {current.map((t, i) => (
+              <div key={`${page}-${i}`} className="card-white p-6 flex flex-col gap-4">
+                {/* Quote icon */}
+                <Quote className="h-6 w-6 opacity-20" style={{ color: t.color }} />
+
+                {/* Text */}
+                <p className="text-gray-700 text-sm leading-relaxed flex-1">"{t.text}"</p>
+
+                {/* Stars */}
+                <div className="flex gap-0.5">
+                  {Array.from({ length: t.rating }).map((_, si) => (
+                    <Star key={si} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+
+                {/* Author */}
+                <div className="flex items-center gap-3 pt-1 border-t border-gray-100">
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                    style={{ background: t.color, fontFamily: "Poppins, sans-serif" }}
+                  >
+                    {t.initial}
+                  </div>
+                  <div>
+                    <div
+                      className="text-sm font-semibold text-gray-900"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
+                      {t.name}
                     </div>
-                    <div className="perfect-center mb-3">
-                      {Array.from({ length: testimonial.rating }).map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="card-text-standard">{testimonial.text}</p>
-                  </CardContent>
-                </Card>
+                    <div className="text-xs text-gray-400">{t.timeAgo} atrás</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <button
+              onClick={() => setPage((p) => (p - 1 + totalPages) % totalPages)}
+              className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-teal hover:text-teal transition-colors"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <div className="flex gap-2">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setPage(i)}
+                  className="w-2.5 h-2.5 rounded-full transition-all"
+                  style={{
+                    background: i === page ? "var(--teal)" : "#e5e7eb",
+                    transform: i === page ? "scale(1.3)" : "scale(1)",
+                  }}
+                />
               ))}
             </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-center items-center mt-8 space-x-4">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={prevSlide}
-                className="w-10 h-10 rounded-full border-2 border-futuristic-turquesa text-futuristic-turquesa hover:bg-futuristic-turquesa hover:text-white"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              
-              {/* Dots indicator */}
-              <div className="flex space-x-2">
-                {Array.from({ length: totalPages }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      index === currentIndex 
-                        ? 'bg-futuristic-turquesa' 
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-              
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={nextSlide}
-                className="w-10 h-10 rounded-full border-2 border-futuristic-turquesa text-futuristic-turquesa hover:bg-futuristic-turquesa hover:text-white"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-          
-          <div className="perfect-center mt-12">
-            <Button
-              size="lg"
-              className="btn-primary-standard btn-large"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
+            <button
+              onClick={() => setPage((p) => (p + 1) % totalPages)}
+              className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-teal hover:text-teal transition-colors"
             >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* CTA */}
+          <div className="flex justify-center">
+            <button className="btn-teal" onClick={() => window.open(WA_URL, "_blank")}>
               Agende Sua Avaliação
-            </Button>
+              <ArrowRight className="h-4 w-4" />
+            </button>
           </div>
         </div>
       </div>

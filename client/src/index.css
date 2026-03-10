@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,11 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(240, 10%, 3.9%);
+  --foreground: hsl(222, 47%, 11%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(222, 47%, 11%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(222, 47%, 11%);
   --primary: hsl(168, 100%, 37%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240, 4.8%, 95.9%);
@@ -23,214 +23,301 @@
   --destructive-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 5.9%, 90%);
   --input: hsl(240, 5.9%, 90%);
-  --ring: hsl(240, 5.9%, 10%);
-  --radius: 0.5rem;
-  
-  /* Custom dental practice colors */
-  --deep-blue: hsl(210, 50%, 25%);
-  --futuristic-turquesa: hsl(168, 100%, 37%);
-  --soft-green: hsl(145, 38%, 69%);
-  --gray-50: hsl(210, 20%, 98%);
-  --gray-900: hsl(210, 11%, 15%);
-}
+  --ring: hsl(168, 100%, 37%);
+  --radius: 0.75rem;
 
-.dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --primary: hsl(168, 100%, 37%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  /* Brand colors */
+  --teal: #00BFA5;
+  --teal-light: #00E5CC;
+  --navy: #0A1628;
+  --navy-mid: #0F2040;
+  --deep-blue: hsl(210, 50%, 25%);
+  --slate: #1E3A5F;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   body {
-    @apply bg-background text-foreground font-roboto antialiased;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    @apply bg-background text-foreground antialiased;
     overflow-x: hidden;
   }
-  
-  .font-poppins {
+
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-  }
-  
-  .font-roboto {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Mobile-specific improvements */
-  @media (max-width: 640px) {
-    .container {
-      @apply px-4;
-    }
-    
-    /* Prevent text overflow */
-    h1, h2, h3, h4, h5, h6 {
-      word-wrap: break-word;
-      hyphens: auto;
-    }
-    
-    /* Ensure proper button sizing on mobile */
-    button {
-      min-height: 44px;
-    }
   }
 }
 
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 191, 165, 0.4); }
+  70%  { box-shadow: 0 0 0 16px rgba(0, 191, 165, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 191, 165, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
 @layer utilities {
-  .text-deep-blue {
-    color: hsl(210, 50%, 25%);
+  /* Animation utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
   }
-  
-  .bg-deep-blue {
-    background-color: hsl(210, 50%, 25%);
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
   }
-  
-  .text-futuristic-turquesa {
-    color: hsl(168, 100%, 37%);
+  .animate-slide-left {
+    animation: slideInLeft 0.7s ease forwards;
   }
-  
-  .bg-futuristic-turquesa {
-    background-color: hsl(168, 100%, 37%);
+  .animate-slide-right {
+    animation: slideInRight 0.7s ease forwards;
   }
-  
-  .text-soft-green {
-    color: hsl(145, 38%, 69%);
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
-  
-  .bg-soft-green {
-    background-color: hsl(145, 38%, 69%);
+  .animate-pulse-ring {
+    animation: pulse-ring 2s ease-in-out infinite;
   }
-  
-  .bg-gray-50 {
-    background-color: hsl(210, 20%, 98%);
+
+  /* Delay utilities */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+
+  /* Initially hidden for animation */
+  .will-animate {
+    opacity: 0;
   }
-  
-  .text-gray-900 {
-    color: hsl(210, 11%, 15%);
+  .in-view {
+    opacity: 1;
   }
-  
-  /* Perfect Alignment Utilities */
-  .perfect-center {
-    @apply flex items-center justify-center;
+
+  /* ─── Color utilities ──────────────────────────────────────────────────── */
+  .text-teal    { color: var(--teal); }
+  .bg-teal      { background-color: var(--teal); }
+  .text-navy    { color: var(--navy); }
+  .bg-navy      { background-color: var(--navy); }
+  .bg-navy-mid  { background-color: var(--navy-mid); }
+  .text-deep-blue { color: hsl(210, 50%, 25%); }
+  .bg-deep-blue   { background-color: hsl(210, 50%, 25%); }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .perfect-center-text {
-    @apply text-center flex items-center justify-center;
+
+  .gradient-text-warm {
+    background: linear-gradient(135deg, #ffffff 0%, var(--teal-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .perfect-vertical-center {
-    @apply flex flex-col justify-center;
+
+  /* ─── Backgrounds ──────────────────────────────────────────────────────── */
+  .bg-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0B2545 100%);
   }
-  
-  /* Standardized Button Classes */
-  .btn-primary-standard {
-    @apply rounded-full font-poppins font-semibold;
-    @apply flex items-center justify-center min-h-[44px] px-6 py-3 transition-all transform hover:scale-105;
-    @apply text-center leading-none whitespace-normal;
-    background-color: hsl(168, 100%, 37%);
-    color: white;
+
+  .bg-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, #0D3355 100%);
   }
-  
-  .btn-primary-standard:hover {
-    background-color: hsl(168, 100%, 33%);
+
+  .bg-teal-gradient {
+    background: linear-gradient(135deg, var(--teal) 0%, #009e88 100%);
   }
-  
-  .btn-secondary-standard {
-    @apply rounded-full font-poppins font-semibold;
-    @apply flex items-center justify-center min-h-[44px] px-6 py-3 transition-all;
-    @apply text-center leading-none whitespace-normal;
-    border: 2px solid hsl(210, 50%, 25%);
-    color: hsl(210, 50%, 25%);
+
+  .dot-pattern {
+    background-image: radial-gradient(circle, rgba(0, 191, 165, 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
-  
-  .btn-secondary-standard:hover {
-    background-color: hsl(210, 50%, 25%);
-    color: white;
+
+  /* ─── Cards ────────────────────────────────────────────────────────────── */
+  .card-glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
   }
-  
-  .btn-large {
-    @apply min-h-[52px] px-8 py-4 text-base md:text-lg;
+
+  .card-glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 191, 165, 0.3);
   }
-  
-  .btn-small {
-    @apply min-h-[36px] px-4 py-2 text-sm;
+
+  .card-white {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  
-  /* Standardized Card Classes */
-  .card-standard {
-    @apply bg-white rounded-2xl shadow-lg border border-gray-200;
-    @apply p-6 space-y-4 transition-all hover:shadow-xl;
+
+  .card-white:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
   }
-  
-  .card-content-centered {
-    @apply flex flex-col items-center justify-center text-center space-y-4;
+
+  .card-teal-border {
+    background: #ffffff;
+    border: 1px solid rgba(0, 191, 165, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 191, 165, 0.08);
+    transition: all 0.3s ease;
   }
-  
-  .card-header-standard {
-    @apply font-poppins font-bold text-deep-blue text-center;
+
+  .card-teal-border:hover {
+    border-color: rgba(0, 191, 165, 0.5);
+    box-shadow: 0 8px 40px rgba(0, 191, 165, 0.15);
+    transform: translateY(-2px);
   }
-  
-  .card-text-standard {
-    @apply font-roboto text-gray-600 text-center leading-relaxed;
+
+  /* ─── Buttons ──────────────────────────────────────────────────────────── */
+  .btn-teal {
+    background: var(--teal);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.875rem 2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    min-height: 52px;
+    font-size: 1rem;
   }
-  
-  /* Standardized Spacing */
-  .section-padding {
-    @apply py-16 sm:py-20;
+
+  .btn-teal:hover {
+    background: #009e88;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 191, 165, 0.4);
   }
-  
-  .container-standard {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+
+  .btn-outline-white {
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.875rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 52px;
+    font-size: 1rem;
   }
-  
-  .content-max-width {
-    @apply max-w-4xl mx-auto;
+
+  .btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
   }
-  
-  .grid-responsive {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+
+  .btn-outline-teal {
+    background: transparent;
+    color: var(--teal);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.875rem 2rem;
+    border: 2px solid var(--teal);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 52px;
+    font-size: 1rem;
   }
-  
-  /* Icon Alignment */
-  .icon-text-aligned {
-    @apply flex items-center justify-center space-x-2 text-center;
+
+  .btn-outline-teal:hover {
+    background: var(--teal);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 191, 165, 0.4);
   }
-  
-  /* Responsive Text Sizing */
-  .heading-primary {
-    @apply font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-deep-blue leading-tight text-center;
+
+  /* ─── Section utilities ────────────────────────────────────────────────── */
+  .section-light {
+    @apply py-20 sm:py-28 bg-white;
   }
-  
-  .heading-secondary {
-    @apply font-poppins font-bold text-xl sm:text-2xl md:text-3xl text-deep-blue leading-tight text-center;
+
+  .section-gray {
+    @apply py-20 sm:py-28 bg-gray-50;
   }
-  
-  .text-body-large {
-    @apply font-roboto text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center;
+
+  .section-dark {
+    @apply py-20 sm:py-28 bg-navy;
   }
-  
-  .text-body {
-    @apply font-roboto text-sm sm:text-base text-gray-600 leading-relaxed text-center;
+
+  .container-xl {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
-  
-  .bg-gray-900 {
-    background-color: hsl(210, 11%, 15%);
+
+  /* ─── Typography ───────────────────────────────────────────────────────── */
+  .heading-xl {
+    font-family: 'Poppins', sans-serif;
+    @apply font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  .heading-lg {
+    font-family: 'Poppins', sans-serif;
+    @apply font-bold text-2xl sm:text-3xl md:text-4xl leading-tight;
+  }
+
+  .heading-md {
+    font-family: 'Poppins', sans-serif;
+    @apply font-semibold text-xl sm:text-2xl leading-tight;
+  }
+
+  .section-label {
+    font-family: 'Poppins', sans-serif;
+    @apply text-xs sm:text-sm font-semibold uppercase tracking-widest text-teal;
+  }
+
+  /* Teal icon wrapper */
+  .icon-teal {
+    @apply w-12 h-12 rounded-full bg-teal flex items-center justify-center flex-shrink-0;
+    background: linear-gradient(135deg, var(--teal) 0%, #009e88 100%);
+  }
+
+  .icon-teal-soft {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0;
+    background: rgba(0, 191, 165, 0.12);
   }
 }

@@ -1,61 +1,92 @@
-import { Button } from "@/components/ui/button";
-import { Shield, Award, Heart, Users } from "lucide-react";
+import { ArrowRight, Shield, Award, Heart, Users } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
+
+const WA_URL =
+  "https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
+
+const trust = [
+  { icon: Shield, text: "Protocolo Exclusivo" },
+  { icon: Award, text: "Especialista Certificado" },
+  { icon: Heart, text: "Garantia de Acompanhamento" },
+  { icon: Users, text: "+500 Pacientes Satisfeitos" },
+];
 
 export default function FinalCTA() {
-  const trustIndicators = [
-    {
-      icon: Shield,
-      text: "Programa Exclusivo",
-    },
-    {
-      icon: Award,
-      text: "Certificado Profissional",
-    },
-    {
-      icon: Heart,
-      text: "Garantia de Acompanhamento",
-    },
-    {
-      icon: Users,
-      text: "+500 Pacientes Satisfeitos",
-    },
-  ];
+  const { ref, inView } = useInView();
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-deep-blue to-deep-blue/90" id="final-cta">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6 sm:mb-8 leading-tight">
-            Pronto para viver sem medo de perder o seu sorriso?
+    <section
+      className="relative py-24 sm:py-32 overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, var(--navy) 0%, #0B2545 60%, #0d3355 100%)",
+      }}
+    >
+      {/* Decorative glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,191,165,0.12) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute top-0 left-0 w-96 h-96 opacity-10 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, var(--teal) 0%, transparent 70%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      <div className="container-xl relative z-10" ref={ref}>
+        <div
+          className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          {/* Label */}
+          <p className="section-label mb-4">Próximo Passo</p>
+
+          {/* Headline */}
+          <h2
+            className="heading-xl text-white mb-6"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Pronto para viver sem medo de{" "}
+            <span className="gradient-text">perder o seu sorriso?</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto">
-            Vamos juntos construir um futuro onde seus dentes acompanhem o ritmo
-            natural da sua vida.
+
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+            Vamos juntos construir um futuro onde seus dentes acompanhem o ritmo natural da sua
+            vida — com saúde, confiança e liberdade.
           </p>
-          
-          <div className="perfect-center flex-col gap-6 mb-12 sm:mb-16">
-            <div className="w-full max-w-md sm:max-w-lg">
-              <Button
-                size="lg"
-                className="btn-primary-standard btn-large w-full text-sm sm:text-base lg:text-lg"
-                onClick={() => {
-                  const quizElement = document.getElementById('quiz');
-                  if (quizElement) {
-                    quizElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Descubra seu Índice de Envelhecimento Bucal
-              </Button>
-            </div>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+            <button
+              className="btn-teal text-base sm:text-lg"
+              style={{ padding: "1rem 2.5rem" }}
+              onClick={() =>
+                document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Descubra seu Índice de Risco
+              <ArrowRight className="h-5 w-5" />
+            </button>
+            <button
+              className="btn-outline-white text-base sm:text-lg"
+              style={{ padding: "1rem 2.5rem" }}
+              onClick={() => window.open(WA_URL, "_blank")}
+            >
+              Agendar pelo WhatsApp
+            </button>
           </div>
-          
+
           {/* Trust indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-300">
-            {trustIndicators.map((indicator, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <indicator.icon className="h-5 w-5 text-futuristic-turquesa" />
-                <span>{indicator.text}</span>
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+            {trust.map((item, i) => (
+              <div key={i} className="flex items-center gap-2 text-gray-400 text-sm">
+                <item.icon className="h-4 w-4" style={{ color: "var(--teal)" }} />
+                <span>{item.text}</span>
               </div>
             ))}
           </div>

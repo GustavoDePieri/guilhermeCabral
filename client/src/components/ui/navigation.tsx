@@ -1,88 +1,132 @@
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const WA_URL = "https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { label: "Protocolo", href: "#protocolo" },
     { label: "Resultados", href: "#testimonials" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Comunidade", href: "#comunidade" },
+    { label: "FAQ", href: "#faq" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollTo = (href: string) => {
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="font-poppins font-bold text-lg md:text-xl text-deep-blue">
-            <span className="hidden sm:inline">Dr. Guilherme Ricardo Cabral dos Santos</span>
-            <span className="sm:hidden">Dr. Guilherme Cabral</span>
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container-xl">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo */}
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-3"
+          >
+            <div
+              className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+              style={{ background: "var(--teal)" }}
+            >
+              GC
+            </div>
+            <div className="text-left">
+              <div
+                className={`font-semibold text-sm sm:text-base leading-tight transition-colors ${
+                  scrolled ? "text-gray-900" : "text-white"
+                }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
+                <span className="hidden sm:inline">Dr. Guilherme Cabral</span>
+                <span className="sm:hidden">Dr. Guilherme</span>
+              </div>
+              <div
+                className="text-xs leading-tight"
+                style={{ color: "var(--teal)", fontFamily: "Poppins, sans-serif" }}
+              >
+                SEPB-Digital®
+              </div>
+            </div>
+          </button>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-deep-blue hover:text-futuristic-turquesa transition-colors"
+                onClick={() => scrollTo(item.href)}
+                className={`text-sm font-medium transition-colors hover:text-teal ${
+                  scrolled ? "text-gray-600" : "text-white/80"
+                }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 {item.label}
               </button>
             ))}
           </div>
-          
-          <div className="hidden md:block">
-            <Button 
-              className="btn-primary-standard"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
+
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              className="btn-teal text-sm px-5 py-2.5"
+              style={{ minHeight: "40px" }}
+              onClick={() => window.open(WA_URL, "_blank")}
             >
+              <Phone className="h-4 w-4" />
               Agendar Avaliação
-            </Button>
+            </button>
           </div>
-          
-          {/* Mobile menu button */}
+
+          {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              scrolled ? "text-gray-700" : "text-white"
+            }`}
           >
-            {isOpen ? (
-              <X className="h-6 w-6 text-deep-blue" />
-            ) : (
-              <Menu className="h-6 w-6 text-deep-blue" />
-            )}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-        
-        {/* Mobile Navigation */}
+
+        {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="space-y-4">
+          <div className="md:hidden py-4 border-t border-gray-100 bg-white rounded-b-2xl shadow-xl">
+            <div className="space-y-1 px-2">
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-2 text-deep-blue hover:text-futuristic-turquesa transition-colors"
+                  onClick={() => scrollTo(item.href)}
+                  className="block w-full text-left px-4 py-3 text-gray-700 font-medium rounded-xl hover:bg-gray-50 hover:text-teal transition-colors"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
                 >
                   {item.label}
                 </button>
               ))}
-              <Button 
-                className="w-full bg-futuristic-turquesa text-white hover:bg-futuristic-turquesa/90 rounded-full font-poppins font-medium mt-4"
-                onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Protocolo SEPB-Digital®', '_blank')}
-              >
-                Agendar Avaliação
-              </Button>
+              <div className="pt-2 px-2">
+                <button
+                  className="btn-teal w-full text-sm"
+                  onClick={() => window.open(WA_URL, "_blank")}
+                >
+                  <Phone className="h-4 w-4" />
+                  Agendar Avaliação
+                </button>
+              </div>
             </div>
           </div>
         )}

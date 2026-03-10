@@ -1,83 +1,124 @@
-import { Button } from "@/components/ui/button";
-import { Microscope, TrendingUp, Shield, GraduationCap } from "lucide-react";
+import { Microscope, TrendingUp, Shield, GraduationCap, ArrowRight } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
+
+const WA_URL =
+  "https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB";
+
+const features = [
+  {
+    icon: Microscope,
+    title: "Diagnóstico Digital",
+    description: "Tecnologia avançada para mapear e identificar cada detalhe do desgaste dos seus dentes.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Registro do Progresso",
+    description: "Acompanhe visualmente sua evolução ao longo do tempo com registros comparativos.",
+  },
+  {
+    icon: Shield,
+    title: "Proteção Contínua",
+    description: "Intervenção preventiva para interromper o desgaste ativo e tratar danos já causados.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Autonomia e Educação",
+    description: "Aprenda a cuidar da sua saúde bucal e se torne protagonista do seu tratamento.",
+  },
+];
 
 export default function Protocol() {
-  const features = [
-    {
-      icon: Microscope,
-      title: "Diagnóstico e digital",
-      description: "Tecnologia avançada para identificar desgaste dos dentes",
-    },
-    {
-      icon: TrendingUp,
-      title: "Registro visual do seu progresso",
-      description: "Acompanhe sua evolução ao longo do tempo",
-    },
-    {
-      icon: Shield,
-      title: "Proteção contra desgaste",
-      description: "Intervenção preventiva e tratar os danos já causados",
-    },
-    {
-      icon: GraduationCap,
-      title: "Educação prática para autonomia",
-      description: "Aprenda a cuidar da sua saúde bucal",
-    },
-  ];
+  const { ref, inView } = useInView();
 
   return (
-    <section className="py-16 sm:py-20 bg-white" id="protocolo">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <div className="space-y-6 sm:space-y-8">
-            <h2 className="heading-primary text-left">
-              Programa Digital de estabilização da SEPB
-            </h2>
-            <div className="space-y-4 sm:space-y-6">
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Método exclusivo que combina tecnologia avançada, conhecimento e acompanhamento contínuo para diagnosticar, proteger e preservar seus dentes naturais — muito além da restauração tradicional.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Além de cuidar, ele te dá o poder de entender cada detalhe, tomar decisões seguras e controlar o desgaste a longo prazo, tornando você protagonista da sua saúde bucal.
+    <section className="section-light" id="protocolo">
+      <div className="container-xl">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: text */}
+          <div
+            className={`space-y-8 transition-all duration-700 ${
+              inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}
+          >
+            <div>
+              <p className="section-label mb-3">O Protocolo</p>
+              <h2 className="heading-lg text-gray-900 mb-4">
+                Programa Digital de{" "}
+                <span className="gradient-text">estabilização da SEPB</span>
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Método exclusivo que combina tecnologia avançada, conhecimento e acompanhamento
+                contínuo para diagnosticar, proteger e preservar seus dentes naturais — muito além da
+                restauração tradicional.
               </p>
             </div>
-            <div className="space-y-4 sm:space-y-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3 sm:space-x-4 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div className="bg-futuristic-turquesa/10 p-2 sm:p-3 rounded-full flex-shrink-0">
-                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-futuristic-turquesa" />
+
+            <div className="space-y-4">
+              {features.map((feature, i) => (
+                <div
+                  key={i}
+                  className={`card-teal-border p-5 flex items-start gap-4 transition-all duration-500 ${
+                    inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  }`}
+                  style={{ transitionDelay: `${i * 100 + 200}ms` }}
+                >
+                  <div className="icon-teal-soft">
+                    <feature.icon className="h-5 w-5" style={{ color: "var(--teal)" }} />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-poppins font-semibold text-base sm:text-lg text-deep-blue mb-1">
+                  <div>
+                    <h3
+                      className="font-semibold text-gray-900 mb-1"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
                       {feature.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="pt-2">
-              <Button
-                size="lg"
-                className="btn-primary-standard btn-large w-full sm:w-auto text-sm sm:text-base"
-                onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988644120&text=Olá! Gostaria de agendar uma avaliação personalizada do Programa Digital de estabilização da SEPB', '_blank')}
-              >
-                Quero Saber Mais
-              </Button>
-            </div>
+
+            <button className="btn-teal" onClick={() => window.open(WA_URL, "_blank")}>
+              Quero Saber Mais
+              <ArrowRight className="h-4 w-4" />
+            </button>
           </div>
-          <div className="relative mt-8 lg:mt-0">
-            <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Dental technology scanner in action"
-              className="rounded-2xl shadow-xl w-full h-auto"
-            />
-            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white p-4 sm:p-6 rounded-2xl shadow-lg">
-              <div className="text-center">
-                <div className="font-poppins font-bold text-lg sm:text-xl text-futuristic-turquesa">
-                  SEPB
+
+          {/* Right: image */}
+          <div
+            className={`relative transition-all duration-700 delay-300 ${
+              inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=700&q=80"
+                alt="Diagnóstico digital odontológico"
+                className="w-full h-auto object-cover rounded-2xl"
+                style={{ maxHeight: "560px" }}
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-navy/40 to-transparent pointer-events-none" />
+            </div>
+
+            {/* Floating card */}
+            <div className="absolute -bottom-5 -left-5 hidden sm:block bg-white rounded-2xl p-5 shadow-2xl border border-gray-100">
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center"
+                  style={{ background: "linear-gradient(135deg, var(--teal), #009e88)" }}
+                >
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600">Program</div>
+                <div>
+                  <div
+                    className="font-bold text-gray-900 text-sm"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                  >
+                    SEPB-Digital®
+                  </div>
+                  <div className="text-xs text-gray-500">Protocolo Exclusivo</div>
+                </div>
               </div>
             </div>
           </div>
