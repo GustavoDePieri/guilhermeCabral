@@ -25,7 +25,7 @@ export default function AboutDoctor() {
   return (
     <section className="section-gray" id="sobre">
       <div className="container-xl">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-start">
           {/* Left: photo */}
           <div
             className={`relative transition-all duration-700 ${
@@ -37,7 +37,7 @@ export default function AboutDoctor() {
                 src="/FotoPerfilGuilherme.jpeg"
                 alt="Dr. Guilherme Ricardo Cabral dos Santos"
                 className="w-full h-auto object-cover rounded-2xl"
-                style={{ maxHeight: "640px" }}
+                style={{ maxHeight: "clamp(280px, 70vw, 640px)" }}
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent pointer-events-none rounded-2xl" />

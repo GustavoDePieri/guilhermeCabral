@@ -55,7 +55,7 @@ export default function Hero() {
       />
 
       <div className="container-xl flex-1 flex items-center pt-20 pb-12 sm:pt-24 sm:pb-16">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center w-full">
           {/* Left column */}
           <div
             className={`space-y-8 transition-all duration-700 ${
@@ -158,7 +158,7 @@ export default function Hero() {
                   controls
                   preload="metadata"
                   className="w-full h-auto rounded-xl"
-                  style={{ maxHeight: "520px", objectFit: "cover" }}
+                  style={{ maxHeight: "clamp(240px, 80vw, 520px)", objectFit: "cover" }}
                 >
                   Seu navegador não suporta vídeo.
                 </video>

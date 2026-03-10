@@ -63,8 +63,7 @@ export default function FinalCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <button
-              className="btn-teal text-base sm:text-lg"
-              style={{ padding: "1rem 2.5rem" }}
+              className="btn-teal text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4"
               onClick={() =>
                 document.getElementById("quiz")?.scrollIntoView({ behavior: "smooth" })
               }
@@ -73,8 +72,7 @@ export default function FinalCTA() {
               <ArrowRight className="h-5 w-5" />
             </button>
             <button
-              className="btn-outline-white text-base sm:text-lg"
-              style={{ padding: "1rem 2.5rem" }}
+              className="btn-outline-white text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4"
               onClick={() => window.open(WA_URL, "_blank")}
             >
               Agendar pelo WhatsApp

@@ -33,7 +33,7 @@ export default function Protocol() {
   return (
     <section className="section-light" id="protocolo">
       <div className="container-xl">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Left: text */}
           <div
             className={`space-y-8 transition-all duration-700 ${
@@ -95,7 +95,7 @@ export default function Protocol() {
                 src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=700&q=80"
                 alt="Diagnóstico digital odontológico"
                 className="w-full h-auto object-cover rounded-2xl"
-                style={{ maxHeight: "560px" }}
+                style={{ maxHeight: "clamp(240px, 70vw, 560px)" }}
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-navy/40 to-transparent pointer-events-none" />

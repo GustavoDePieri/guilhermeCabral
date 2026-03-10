@@ -59,15 +59,28 @@ const testimonials = [
 export default function Testimonials() {
   const { ref, inView } = useInView();
   const [page, setPage] = useState(0);
-  const perPage = 3;
+  const [perPage, setPerPage] = useState(3);
   const totalPages = Math.ceil(testimonials.length / perPage);
+
+  useEffect(() => {
+    const update = () => {
+      setPerPage(window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  useEffect(() => {
+    setPage(0);
+  }, [perPage]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((p) => (p + 1) % totalPages);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [totalPages]);
 
   const current = testimonials.slice(page * perPage, page * perPage + perPage);
 
@@ -107,7 +120,7 @@ export default function Testimonials() {
                   controls
                   preload="metadata"
                   className="w-full h-auto rounded-xl"
-                  style={{ maxHeight: "320px" }}
+                  style={{ maxHeight: "clamp(180px, 50vw, 320px)" }}
                 >
                   Seu navegador não suporta vídeo.
                 </video>

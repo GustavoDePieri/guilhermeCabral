@@ -91,11 +91,10 @@ export default function Community() {
               }`}
             >
               <div
-                className="rounded-3xl overflow-hidden shadow-2xl"
+                className="rounded-3xl overflow-hidden shadow-2xl p-6 sm:p-10"
                 style={{
                   background: "linear-gradient(135deg, var(--navy) 0%, #0d2a4a 100%)",
-                  minHeight: "420px",
-                  padding: "40px",
+                  minHeight: "clamp(320px, 60vw, 420px)",
                 }}
               >
                 {/* Content inside the dark card */}

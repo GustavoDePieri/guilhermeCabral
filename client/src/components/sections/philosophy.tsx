@@ -66,13 +66,13 @@ export default function Philosophy() {
           </div>
 
           {/* Beliefs — 6-col grid: top 3 cards × col-span-2, bottom 2 × col-span-3 */}
-          <div className="grid grid-cols-1 sm:grid-cols-6 gap-5 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5 mb-12">
             {beliefs.map((b, i) => (
               <div
                 key={i}
-                className={`card-glass p-7 rounded-2xl flex flex-col gap-4 transition-all duration-700 ${
+                className={`card-glass p-5 sm:p-7 rounded-2xl flex flex-col gap-4 transition-all duration-700 ${
                   inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                } ${i < 3 ? "sm:col-span-2" : "sm:col-span-3"}`}
+                } ${i < 3 ? "lg:col-span-2" : "lg:col-span-3"}`}
                 style={{ transitionDelay: `${i * 100 + 100}ms` }}
               >
                 {/* Teal accent bar */}

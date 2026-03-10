@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer style={{ background: "#06101e" }} className="text-white">
       <div className="container-xl py-14">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">

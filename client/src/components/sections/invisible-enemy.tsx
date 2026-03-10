@@ -70,12 +70,12 @@ export default function InvisibleEnemy() {
             }`}
           >
             <div
-              className="card-glass p-10 text-center rounded-3xl"
+              className="card-glass p-6 sm:p-10 text-center rounded-3xl"
               style={{ borderColor: "rgba(0,191,165,0.25)" }}
             >
               <div
                 className="heading-xl gradient-text mb-2"
-                style={{ fontSize: "clamp(4rem, 10vw, 7rem)", lineHeight: 1 }}
+                style={{ fontSize: "clamp(2.5rem, 10vw, 7rem)", lineHeight: 1 }}
               >
                 70%
               </div>

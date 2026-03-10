@@ -118,13 +118,13 @@ export default function Timeline() {
                     </div>
 
                     {step.description && (
-                      <p className="text-gray-600 leading-relaxed pl-[72px]">
+                      <p className="text-gray-600 leading-relaxed pl-16 sm:pl-[72px]">
                         {step.description}
                       </p>
                     )}
 
                     {step.bullets && (
-                      <ul className="space-y-2 pl-[72px]">
+                      <ul className="space-y-2 pl-16 sm:pl-[72px]">
                         {step.bullets.map((b, bi) => (
                           <li key={bi} className="flex items-start gap-3 text-gray-600 text-sm">
                             <div
@@ -140,19 +140,19 @@ export default function Timeline() {
 
                   {/* Image */}
                   <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ minHeight: "280px" }}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl">
                       <img
                         src={step.image}
                         alt={step.title}
                         className="w-full object-cover rounded-2xl"
-                        style={{ height: "340px", objectPosition: "center" }}
+                        style={{ height: "clamp(220px, 50vw, 340px)", objectPosition: "center" }}
                         onError={(e) => {
                           const el = e.currentTarget;
                           el.style.display = "none";
                           const parent = el.parentElement;
                           if (parent) {
                             parent.style.background = placeholderColors[i];
-                            parent.style.minHeight = "340px";
+                            parent.style.minHeight = "220px";
                           }
                         }}
                       />
